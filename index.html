@@ -228,127 +228,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/My-First-Post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/20/My-First-Post/" itemprop="url">My First Post</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T13:41:48+08:00">
-                2020-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>作者：工匠羅<br>链接：<a href="https://www.zhihu.com/question/59088760/answer/265741938" target="_blank" rel="noopener">https://www.zhihu.com/question/59088760/answer/265741938</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<p>不请自来。这两天刚研究好的，趁热吃吧。源地址：用 Hexo 和 GitHub Pages 搭建博客  (&lt;– 此博客就是 Github Pages 上的）声明：本文为 ryanluoxu 原创文章，可以转载，但必须在明显位置注明出处！搭建这个博客走了许多弯路。在这里分享总结之后的思路和简化步骤。Github PagesHexo 博客框架部署Next 主题Github PagesGithub Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。操作如下： 1. 注册 Github 账号，然后在 Github 中创建一个以 .<a href="http://github.io" target="_blank" rel="noopener">http://github.io</a> 结尾的 Repository。Repository name: <a href="http://ryanluoxu.github.io勾选" target="_blank" rel="noopener">http://ryanluoxu.github.io勾选</a> Initialize this repository with a READMECreate repository2. 简单地编辑一下 README.md 这个文档。 比如添加：I am trying to create my own blog.. 保存(Commit changes)。3. 打开网页：<a href="http://ryanluoxu.github.io" target="_blank" rel="noopener">http://ryanluoxu.github.io</a> 这里就可以看到 README.md 里的内容了。如果没有太多的要求，其实直接用 README.md 来写博客也是不错的。这个生成好的 Repository 就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被 <a href="http://ryanluoxu.github.io" target="_blank" rel="noopener">http://ryanluoxu.github.io</a> 这个网页显示出来。HexoHexo 是一个博客框架。它把本地文件里的信息生成一个网页。如果不需要放在网上给别人看，就没 Github Pages 什么事了。使用 Hexo 之前，需要先安装 Node.js 和 Git。操作如下：1. 安装 Node.js前往 <a href="https://nodejs.org/en/点击" target="_blank" rel="noopener">https://nodejs.org/en/点击</a> 8.9.1 LTS 下载安装打开 Command Prompt， 输入 node -v得到：v8.9.1安装成功2. 安装 Git前往 <a href="https://git-scm.com/点击" target="_blank" rel="noopener">https://git-scm.com/点击</a> Downloads点击 Windows一般情况，下载会自动开始。如果没有，就点击 click here to download manually安装打开 Command Prompt， 输入 git –version得到：git version 2.15.0.windows.1安装成功额外说明：如果 Git –version 指令不管用，可能需要到 Environment Variable 那里添加 Path。3. 安装 Hexo打开 Command Prompt输入 npm install -g hexo-cli回车开始安装输入 hexo -v得到 hexo-cli: 1.0.4 等一串数据安装成功4. 创建本地博客在D盘下创建文件夹 blog鼠标右键 blog，选择 Git Bash Here。 如果没有安装 Git，就不会有这个选项。Git Bash 打开之后，所在的位置就是 blog 这个文件夹的位置。（/d/blog）输入 hexo init 将 blog 文件夹初始化成一个博客文件夹。输入 npm install 安装依赖包。输入 hexo g 生成（generate）网页。 由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客。输入 hexo s 将生成的网页放在了本地服务器（server）。浏览器里输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 。 就可以看到刚才的成果了。回到 Git Bash，按 Ctrl+C 结束。此时再看 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就是无法访问了。5. 发布一篇博客继续在 Git Bash 里，所在路径还是 /d/blog。输入 hexo new “My First Post”在 D:\blog\source_posts 路径下，会有一个 My-First-Post.md 的文件。 编辑这个文件，然后保存。回到 Git Bash，输入 hexo g输入 hexo s前往 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 查看成果。回到 Git Bash，按 Ctrl+C 结束。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -514,7 +393,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
