@@ -838,18 +838,16 @@
           
             <p>（我又稍微修改了一下这篇文章🕵️‍♂️）</p>
 <h4 id="一-Markdown是什么？"><a href="#一-Markdown是什么？" class="headerlink" title="一. Markdown是什么？"></a>一. Markdown是什么？</h4><p><strong>Markdown</strong>是一种轻量级<strong>标记语言</strong>，它以纯文本形式(<em>易读、易写、易更改</em>)编写文档，并最终以HTML格式发布。<br><strong>Markdown</strong>也可以理解为将以MARKDOWN语言编写的语言转换成HTML内容的工具，最初是一个perl脚本<em>Markdown.pl</em>。    </p>
-<h5 id="我为什么要用它？"><a href="#我为什么要用它？" class="headerlink" title="我为什么要用它？"></a>我为什么要用它？</h5><ul>
-<li><p>它易读（看起来舒服）、易写（语法简单）、易更改<strong>纯文本</strong>。处处体现着<strong>极简主义</strong>的影子。</p>
+<h5 id="👴为什么要用它？"><a href="#👴为什么要用它？" class="headerlink" title="👴为什么要用它？"></a>👴为什么要用它？</h5><ul>
+<li><p>它观感极佳、语法简单(相对于Latex)、沉浸式文本编辑(理论上不需要动鼠标，呜呜呜word又要调字号了(🤦‍♂️))。而且它的逼格高(。</p>
 </li>
 <li><p>兼容HTML，可以转换为HTML格式发布。</p>
 </li>
-<li><p>跨平台使用。</p>
+<li><p>很多的主流网站都支持Markdown语法(Stackoverflow,CSDN,洛谷，某乎好像也支持)。</p>
 </li>
-<li><p>越来越多的网站支持Markdown。</p>
+<li><p>排版效果不亚于一般的文档处理软件，方便阅读</p>
 </li>
-<li><p>更方便清晰的组织你的电子邮件。（Markdown-here, Airmail）</p>
-</li>
-<li><p>摆脱Word（我不是认真的）。</p>
+<li><p>身边人都在用（呜呜呜）。</p>
 <hr>
 </li>
 </ul>
@@ -953,7 +951,23 @@
 <li><p>或者使用多个”`”来包裹代码</p>
 </li>
 </ul>
-<h5 id="3-3-流程图"><a href="#3-3-流程图" class="headerlink" title="3.3 流程图"></a>3.3 流程图</h5><h5 id="3-4-表格"><a href="#3-4-表格" class="headerlink" title="3.4 表格"></a>3.4 表格</h5><p>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。<br>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。<br>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。<br><code>-</code> 左对齐， <code>:-:</code> 中心对齐，<code>-:</code> 右对齐<br>例如：</p>
+<h5 id="3-3-HTML标签"><a href="#3-3-HTML标签" class="headerlink" title="3.3 HTML标签"></a>3.3 HTML标签</h5><p> Markdown语法中支持嵌套 Html 标签，比如下图的表格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;th rowspan&#x3D;&quot;2&quot;&gt;我&#x3D;&lt;&#x2F;th&gt;</span><br><span class="line">        &lt;th&gt;Fri&lt;&#x2F;th&gt;</span><br><span class="line">        &lt;th&gt;Sat&lt;&#x2F;th&gt;</span><br><span class="line">        &lt;th&gt;Sun&lt;&#x2F;th&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;摸鱼&lt;&#x2F;td&gt;</span><br><span class="line">        &lt;td&gt;划水&lt;&#x2F;td&gt;</span><br><span class="line">        &lt;td&gt;睡觉&lt;&#x2F;td&gt;</span><br><span class="line">    &lt;&#x2F;tr&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+<table>
+    <tr>
+        <th rowspan="2">我=</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+    </tr>
+    <tr>
+        <td>摸鱼</td>
+        <td>划水</td>
+        <td>睡觉</td>
+    </tr>
+</table>
+
+<h5 id="3-4-表格"><a href="#3-4-表格" class="headerlink" title="3.4 表格"></a>3.4 表格</h5><p>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。<br>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。<br>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。<br><code>-</code> 左对齐， <code>:-:</code> 中心对齐，<code>-:</code> 右对齐<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|  装备名称      |  属性  |  售价  |</span><br><span class="line">|  -----------  |  ------- |  ------- |</span><br><span class="line">|  卓越的开天    |  力量+2，敏捷+8    |  ￥999  |</span><br><span class="line">|  屠龙刀        |  对群龙王伤害翻倍  |  ￥99   |</span><br><span class="line">|  记事本（      |  作业++      |  ￥1    |</span><br></pre></td></tr></table></figure>
 <p>显示出来就是这样的：</p>
 <table>
@@ -980,19 +994,18 @@
 <td>￥1</td>
 </tr>
 </tbody></table>
-<h5 id="3-6-Latex"><a href="#3-6-Latex" class="headerlink" title="3.6 Latex"></a>3.6 Latex</h5><p>这个就8用多说了，Latex的功能相当丰富，而markdown追求的是简洁，但我们仍然可以在markdown里使用Latex中使用<code>$ $</code>和<code>$$ $$</code>的功能。<br>附上一段上周问求作业的错误答案让大家看下效果:</p>
+<h5 id="3-5-Latex"><a href="#3-5-Latex" class="headerlink" title="3.5 Latex"></a>3.5 Latex</h5><p>这个就8用多说了，Latex的功能相当丰富，而markdown追求的是简洁，但我们仍然可以在markdown里使用Latex中使用<code>$ $</code>和<code>$$ $$</code>的功能。<br>附上一段上周问求作业的错误答案让大家看下效果:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$E(Y)&#x3D;E(\sum_&#123;i&#x3D;1&#125;^n E(Y_i))&#x3D;\sum_&#123;i&#x3D;1&#125;^n E(Y_i)&#x3D;\sum_&#123;i&#x3D;1&#125;^n \dfrac&#123;i\binom&#123;i-1&#125;&#123;k-1&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\sum_&#123;i&#x3D;1&#125;^n \dfrac&#123;\binom&#123;i&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;$$</span><br><span class="line"></span><br><span class="line">$$&#x3D;\dfrac&#123;0+\cdots 0 + \binom&#123;k&#125;&#123;k&#125;+\binom&#123;k+1&#125;&#123;k&#125;+\cdots \binom&#123;n&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\dfrac&#123;\binom&#123;k+1&#125;&#123;k+1&#125;+\binom&#123;k+1&#125;&#123;k&#125;+\cdots \binom&#123;n&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;$$</span><br><span class="line"></span><br><span class="line">$$&#x3D;\dfrac&#123;\binom&#123;n+1&#125;&#123;k+1&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\dfrac&#123;(n+1)!\times (n-k)! \times k!&#125;&#123;(n-k)!\times(k+1)!\times n!&#125;&#x3D;\dfrac&#123;n+1&#125;&#123;k+1&#125;$$</span><br></pre></td></tr></table></figure>
 
-<p>$$E(Y)=E(\sum_{i=1}^n E(Y_i))=\sum_{i=1}^n E(Y_i)=\sum_{i=1}^n \dfrac{i\binom{i-1}{k-1}}{\binom{n}{k}}=\sum_{i=1}^n \dfrac{\binom{i}{k}}{\binom{n}{k}}$$</p>
-<p>$$=\dfrac{0+\cdots 0 + \binom{k}{k}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}=\dfrac{\binom{k+1}{k+1}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}$$</p>
-<p>$$=\dfrac{\binom{n+1}{k+1}}{\binom{n}{k}}=\dfrac{(n+1)!\times (n-k)! \times k!}{(n-k)!\times(k+1)!\times n!}=\dfrac{n+1}{k+1}$$</p>
+<p>$E(Y)=E(\sum_{i=1}^n E(Y_i))=\sum_{i=1}^n E(Y_i)=\sum_{i=1}^n \dfrac{i\binom{i-1}{k-1}}{\binom{n}{k}}=\sum_{i=1}^n \dfrac{\binom{i}{k}}{\binom{n}{k}}$</p>
+<p>$=\dfrac{0+\cdots 0 + \binom{k}{k}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}=\dfrac{\binom{k+1}{k+1}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}$</p>
+<p>$=\dfrac{\binom{n+1}{k+1}}{\binom{n}{k}}=\dfrac{(n+1)!\times (n-k)! \times k!}{(n-k)!\times(k+1)!\times n!}=\dfrac{n+1}{k+1}$</p>
 <h5 id="3-6-分隔线"><a href="#3-6-分隔线" class="headerlink" title="3.6 分隔线"></a>3.6 分隔线</h5><p>这几种写法都可以产生分隔线</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span><span class="emphasis">* *</span></span><br><span class="line"><span class="emphasis">***</span></span><br><span class="line"><span class="strong">*****</span></span><br><span class="line"><span class="bullet">- </span>- -</span><br><span class="line">-----------</span><br></pre></td></tr></table></figure>
 
 <p>而效果都是一样的</p>
 <hr>
-<h5 id="3-7-HTML源代码"><a href="#3-7-HTML源代码" class="headerlink" title="3.7 HTML源代码"></a>3.7 HTML源代码</h5><p>在代码区块里面， &amp; 、 &lt; 和 &gt; 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，剩下的 Markdown 都会帮你处理.</p>
-<h5 id="3-8-特殊字"><a href="#3-8-特殊字" class="headerlink" title="3.8 特殊字"></a>3.8 特殊字</h5><p>部分从HTML中继承的特殊符号（转载自<a href="(https://www.jianshu.com/p/72481849cd33)">子非鱼_YE</a>，有删改，侵删）</p>
+<h5 id="3-7-特殊字"><a href="#3-7-特殊字" class="headerlink" title="3.7 特殊字"></a>3.7 特殊字</h5><p>部分从HTML中继承的特殊符号（转载自<a href="https://www.jianshu.com/p/72481849cd33" target="_blank" rel="noopener">子非鱼_YE</a>，有删改，侵删）</p>
 <table>
 <thead>
 <tr>
@@ -1296,149 +1309,13 @@
 <h4 id="常用的Markdown工具。"><a href="#常用的Markdown工具。" class="headerlink" title="常用的Markdown工具。"></a>常用的Markdown工具。</h4><h6 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h6><ul>
 <li><strong>Vscode</strong> 万能编辑器，都能装编译器变IDE，写Markdown不是小意思🐎，记得装插件，Vsc自带的侧边预览着实让我头大。</li>
 <li><strong>Typora</strong> 貌似是口碑最好的Markdown编辑器，极简主义+观感很好的实时预览（Vscode自带的侧边预览效果就像看夜间模式的电子书）。    </li>
-<li><strong>记事本</strong> 真正的企业级玩家的威能武器。  </li>
+<li><strong>记事本</strong> 真正的企业级玩家的威能武器 <strong>（</strong> 记事本就是零号世界线（雾。  </li>
 </ul>
 <hr>
 <p>下面就出现我们刚才说的<strong>注脚</strong>，让我们回看一下：</p>
 <blockquote>
 <p><strong>注意</strong>：经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经Markdown转换后，也会自动归类到文章的最后。</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/20/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-20T05:27:44Z">
-                2020-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
         
@@ -1524,7 +1401,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
