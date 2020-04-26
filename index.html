@@ -305,6 +305,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/Scheduler/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tom Forest">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tom's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/26/Scheduler/" itemprop="url">Scheduler</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-26T01:55:24+08:00">
+                2020-04-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oj/" itemprop="url" rel="index">
+                    <span itemprop="name">oj</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>讲真，没有de过这么长时间的代码</p>
+<p>前前后后将近重写了三次，因为一开始选择的写法貌似不是正解因而寸步难行</p>
+<p>星期四晚上好不容易写出了1ed，星期五de了一天到12点决定作废。</p>
+<p>然后一直写到4点多，写出了2ed，原以为会A的。</p>
+<p>结果折腾到下午4点，从WA97到WA73到WA38到WA28，还是没有出结果，一直卡在了WA28</p>
+<p>挂出这段让人心碎的随机调度代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Task</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id,type,atime,btime;</span><br><span class="line">&#125; tasktmp;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> act,bct,ansat,ansbt,idA,idB;</span><br><span class="line">&#125; ti[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> n,t1=<span class="number">0</span>,t2=<span class="number">0</span>,t3=<span class="number">0</span>,num=<span class="number">0</span>,anstime=<span class="number">0x3f3f3f3f</span>,l1=<span class="number">0</span>,l2=<span class="number">0</span>,id[<span class="number">3</span>][<span class="number">100</span>]=&#123;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt; taskA,taskB,task1,task2,task3,part1,part2;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exchange</span><span class="params">(<span class="built_in">Task</span> x, <span class="built_in">Task</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">Task</span> tmp;</span><br><span class="line">    tmp = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = tmp;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ans</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> timeA = <span class="number">0</span>, timeB = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l1; i++)</span><br><span class="line">    	tasktmp=part1[i],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n;i++)</span><br><span class="line">		tasktmp=part2[i-l1],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l2; i++)</span><br><span class="line">    	tasktmp=part2[i],taskB.push_back(tasktmp);</span><br><span class="line">    	</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n;i++)</span><br><span class="line">		tasktmp=part1[i-l2],taskB.push_back(tasktmp);</span><br><span class="line">    <span class="comment">//////////////////initial</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l1; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i].act=timeA; </span><br><span class="line">		timeA+=taskA[i].atime; </span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = l1; i&lt;n; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i-l1].bct=timeB;</span><br><span class="line">		timeB+=taskB[i-l1].btime;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///A processor judge</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeA&gt;=ti[i-l1].bct+taskA[i-l1].btime )</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeA=ti[i-l1].bct+taskA[i-l1].btime;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///B processor judge</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeB&gt;=ti[i-l2].act+taskA[i-l2].atime)</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeB=ti[i-l2].act+taskA[i-l2].atime;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">max</span>(timeA,timeB)&lt;anstime)</span><br><span class="line">    &#123;</span><br><span class="line">        anstime=<span class="built_in">max</span>(timeA,timeB);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	ti[i].ansat=ti[i].act;</span><br><span class="line">        	ti[i].ansbt=ti[i].bct;</span><br><span class="line">        	ti[i].idA=taskA[i].id;</span><br><span class="line">        	ti[i].idB=taskB[i].id;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    taskA.<span class="built_in">clear</span>();</span><br><span class="line">    taskB.<span class="built_in">clear</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (pos &gt; num<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        l1=task1.<span class="built_in">size</span>();l2=task2.<span class="built_in">size</span>();</span><br><span class="line">        </span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l1;i++)</span><br><span class="line">			tasktmp=task1[i],part1.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l2;i++)</span><br><span class="line">			tasktmp=task2[i],part2.push_back(tasktmp);</span><br><span class="line">	</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="keyword">if</span>(l1&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> a1=rand()%l1,a2=rand()%l1;</span><br><span class="line">				exchange(part1[a1], part1[a2]);</span><br><span class="line">			&#125;</span><br><span class="line">    		<span class="keyword">if</span>(l2&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> b1=rand()%l2,b2=rand()%l2;</span><br><span class="line">				exchange(part2[b1], part2[b2]);</span><br><span class="line">			&#125;</span><br><span class="line">            ans();   </span><br><span class="line">        &#125;</span><br><span class="line">        part1.<span class="built_in">clear</span>();</span><br><span class="line">        part2.<span class="built_in">clear</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> 		<span class="built_in">Task</span> tt=task3[pos];</span><br><span class="line"> 		</span><br><span class="line"> 		tt.type=<span class="number">1</span>;task1.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);</span><br><span class="line">	    <span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt;::iterator it=task1.<span class="built_in">end</span>();it--;task1.erase(it);</span><br><span class="line">	    </span><br><span class="line">	    tt.type=<span class="number">2</span>;task2.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);it=task2.<span class="built_in">end</span>();it--;task2.erase(it);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    srand(<span class="keyword">unsigned</span>(<span class="number">114514</span>));  </span><br><span class="line">    srand(<span class="keyword">unsigned</span>(time(<span class="literal">nullptr</span>)));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;t1,&amp;t2,&amp;t3);</span><br><span class="line">        tasktmp.id = i;</span><br><span class="line">        tasktmp.type = t1;</span><br><span class="line">        tasktmp.atime = t2;</span><br><span class="line">        tasktmp.btime = t3;</span><br><span class="line">        <span class="keyword">switch</span>(t1)</span><br><span class="line">		&#123;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">1</span>: task1.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">2</span>: task2.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">3</span>: task3.push_back(tasktmp);num++;<span class="keyword">break</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    num=task3.<span class="built_in">size</span>();</span><br><span class="line">    solve(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, anstime);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"A %d %d\n"</span>, ti[i].ansat, ti[i].idA);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"B %d %d\n"</span>, ti[i].ansbt, ti[i].idB);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>心态♥真的炸了，👴♥累，再也不想写OJ了，这日子比高三还要苦</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/Vscode-WSL%E9%83%A8%E7%BD%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -959,7 +1112,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -970,7 +1123,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -981,7 +1134,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
