@@ -1349,4 +1349,308 @@
         <tag>html</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Python I/O基本操作</title>
+    <url>/2020/07/14/Python%20IO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h3 id="1-打印到屏幕"><a href="#1-打印到屏幕" class="headerlink" title="1.打印到屏幕"></a>1.打印到屏幕</h3><p>最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"abc123"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>你的标准屏幕上会产生以下结果：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">abc123</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-读取键盘输入"><a href="#2-读取键盘输入" class="headerlink" title="2.读取键盘输入"></a>2.读取键盘输入</h3><p>Python提供了两个内置函数从标准输入读入一行文本，默认的标准输入是键盘。如下：</p>
+<ul>
+<li><p>raw_input</p>
+</li>
+<li><p>input</p>
+</li>
+</ul>
+<h4 id="2-1-raw-input函数"><a href="#2-1-raw-input函数" class="headerlink" title="2.1 raw_input函数"></a>2.1 raw_input函数</h4><p>raw_input([prompt]) 函数从标准输入读取一个行，并返回一个字符串(<strong>去掉结尾的换行符</strong>)：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"> </span><br><span class="line">str = raw_input(<span class="string">"请输入："</span>)</span><br><span class="line">print(<span class="string">"你输入的内容是: "</span>, str)</span><br></pre></td></tr></table></figure>
+
+<p>这将提示你输入任意字符串，然后在屏幕上显示相同的字符串。当我输入”Hello Python！”，它的输出如下：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">请输入：Hello Python！</span><br><span class="line">你输入的内容是:  Hello Python！</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-input函数"><a href="#2-2-input函数" class="headerlink" title="2.2 input函数"></a>2.2 input函数</h4><p>input([prompt]函数和raw_input([prompt])函数基本类似,<strong>但是 input 可以接收一个Python表达式作为输入，并将运算结果返回</strong>。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"> </span><br><span class="line">str = input(<span class="string">"请输入："</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"你输入的内容是: "</span>, str</span><br></pre></td></tr></table></figure>
+
+<p>这会产生如下的对应着输入的结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">请输入：[x*<span class="number">5</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>,<span class="number">10</span>,<span class="number">2</span>)]</span><br><span class="line">你输入的内容是:  [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-打开和关闭文件"><a href="#3-打开和关闭文件" class="headerlink" title="3. 打开和关闭文件"></a>3. 打开和关闭文件</h3><p>现在，您已经可以向标准输入和输出进行读写。现在，来看看怎么读写实际的数据文件。</p>
+<p>Python 提供了必要的函数和方法进行默认情况下的文件基本操作。你可以用 <strong>file</strong> 对象做大部分的文件操作。</p>
+<h4 id="3-1-open-函数"><a href="#3-1-open-函数" class="headerlink" title="3.1 open 函数"></a>3.1 open 函数</h4><p>你必须先用Python内置的open()函数打开一个文件，创建一个file对象，相关的方法才可以调用它进行读写。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">file object = open(file_name [, access_mode][, buffering])</span><br></pre></td></tr></table></figure>
+
+
+<p>各个参数的细节如下：</p>
+<ul>
+<li><p><strong>file_name</strong>：file_name变量是一个包含了你要访问的文件名称的字符串值。</p>
+</li>
+<li><p><strong>access_mode</strong>：access_mode决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。</p>
+</li>
+<li><p><strong>buffering</strong>: 如果buffering的值被设为0，就不会有寄存。如果buffering的值取1，访问文件时会寄存行。如果将buffering的值设为大于1的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。</p>
+</li>
+</ul>
+<p>不同模式打开文件的完全列表：</p>
+<table class="reference">
+<tbody><tr><th style="width:10%">模式</th><th>描述</th></tr>
+<tr><td>t</td><td>文本模式 (默认)。</td></tr>
+<tr><td>x</td><td>写模式，新建一个文件，如果该文件已存在则会报错。</td></tr>
+<tr><td>b</td><td>二进制模式。</td></tr>
+<tr><td>+</td><td>打开一个文件进行更新(可读可写)。</td></tr>
+<tr><td>U</td><td>通用换行模式(不推荐)。</td></tr>
+<tr><td>r</td><td>以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。</td></tr>
+<tr><td>rb</td><td>以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。一般用于非文本文件如图片等。</td></tr>
+<tr><td>r+</td><td>打开一个文件用于读写。文件指针将会放在文件的开头。</td></tr>
+<tr><td>rb+</td><td>以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。一般用于非文本文件如图片等。</td></tr>
+<tr><td>w</td><td>打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td></tr>
+<tr><td>wb</td><td>以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。</td></tr>
+<tr><td>w+</td><td>打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td></tr> 
+<tr><td>wb+</td><td>以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。</td></tr>
+
+
+<tr><td>a</td><td>打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</td></tr> 
+<tr><td>ab</td><td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</td></tr> 
+<tr><td>a+</td><td>打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。</td></tr> 
+<tr><td>ab+</td><td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</td></tr>
+
+</tbody></table>
+下图很好的总结了这几种模式：
+
+<table class="reference">
+<thead>
+<tr>
+<th style="text-align:center">模式</th>
+<th style="text-align:center">r</th>
+<th style="text-align:center">r+</th>
+<th style="text-align:center">w</th>
+<th style="text-align:center">w+</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">a+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">读</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+</tr>
+<tr>
+<td style="text-align:center">写</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+</tr>
+<tr>
+<td style="text-align:center">创建</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+</tr>
+<tr>
+<td style="text-align:center">覆盖</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">指针在开始</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">指针在结尾</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">+</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="3-2-File对象的属性"><a href="#3-2-File对象的属性" class="headerlink" title="3.2 File对象的属性"></a>3.2 File对象的属性</h4><p>一个文件被打开后，你有一个file对象，你可以得到有关该文件的各种信息。</p>
+<p>以下是和file对象相关的所有属性的列表：</p>
+<table class="reference">
+<tbody><tr><th>属性</th><th>描述</th></tr>
+<tr><td>file.closed</td><td>返回true如果文件已被关闭，否则返回false。</td></tr>
+<tr><td>file.mode</td><td>返回被打开文件的访问模式。</td></tr>
+<tr><td>file.name</td><td>返回文件的名称。</td></tr>
+<tr><td>file.softspace</td><td>如果用print输出后，必须跟一个空格符，则返回false。否则返回true。</td></tr>
+</tbody></table>
+
+<p>如下实例：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"文件名: "</span>, fo.name</span><br><span class="line"><span class="keyword">print</span> <span class="string">"是否已关闭 : "</span>, fo.closed</span><br><span class="line"><span class="keyword">print</span> <span class="string">"访问模式 : "</span>, fo.mode</span><br><span class="line"><span class="keyword">print</span> <span class="string">"末尾是否强制加空格 : "</span>, fo.softspace</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">文件名:  foo.txt</span><br><span class="line">是否已关闭 :  <span class="literal">False</span></span><br><span class="line">访问模式 :  w</span><br><span class="line">末尾是否强制加空格 :  <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="3-2-读写文件"><a href="#3-2-读写文件" class="headerlink" title="3.2 读写文件"></a>3.2 读写文件</h4><h5 id="3-2-1-close-方法"><a href="#3-2-1-close-方法" class="headerlink" title="3.2.1 close()方法"></a>3.2.1 close()方法</h5><p>File对象的 close()方法刷新缓冲区里任何还没写入的信息，并关闭该文件，这之后便不能再进行写入。当一个文件对象的引用被重新指定给另一个文件时，Python 会关闭之前的文件。用 close()方法关闭文件是一个很好的习惯。</p>
+<p>语法：</p>
+<p>fileObject.close()</p>
+<p>例子：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">print(<span class="string">"文件名: "</span>, fo.name)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">文件名:  foo.txt</span><br></pre></td></tr></table></figure>
+
+
+<p>file对象提供了一系列方法，能让我们的文件访问更轻松。来看看如何使用read()和write()方法来读取和写入文件。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#可以使用with语句打开，不需要关闭，可以同时打开多个文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'路径'</span>,mode = <span class="string">'打开模式'</span>, encoding=<span class="string">'编码'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-2-write-方法"><a href="#3-2-2-write-方法" class="headerlink" title="3.2.2 write()方法"></a>3.2.2 write()方法</h5><p>write()方法可将任何字符串写入一个打开的文件。需要重点注意的是，Python字符串可以是二进制数据，而不是仅仅是文字。</p>
+<p>write()方法<strong>不会</strong>在字符串的结尾添加换行符(‘\n’)：</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">fileObject.write(string)</span><br></pre></td></tr></table></figure>
+
+
+<p>在这里，被传递的参数是要写入到已打开文件的内容。</p>
+<p>例子：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">fo.write( <span class="string">"www.runoob.com!\nVery good site!\n"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
+
+<p>上述方法会创建foo.txt文件，并将收到的内容写入该文件，并最终关闭文件。如果你打开这个文件，将看到以下内容:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat foo.txt </span><br><span class="line">www.runoob.com!</span><br><span class="line">Very good site!</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-3-read-方法"><a href="#3-2-3-read-方法" class="headerlink" title="3.2.3 read()方法"></a>3.2.3 read()方法</h5><p>read()方法从一个打开的文件中读取一个字符串。需要重点注意的是，Python字符串可以是二进制数据，而不是仅仅是文字。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">fileObject.read([count])</span><br></pre></td></tr></table></figure>
+
+<p>在这里，被传递的参数是要从已打开文件中读取的字节计数。该方法从文件的开头开始读入，如果没有传入count，它会尝试尽可能多地读取更多的内容，很可能是直到文件的末尾。</p>
+<h3>
+例子：
+</h3>
+
+<p>这里我们用到以上创建的 foo.txt 文件。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"r+"</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"读取的字符串是 : "</span>, str</span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">读取的字符串是 :  www.runoob</span><br></pre></td></tr></table></figure>
+
+<p>文件位置：</p>
+<p>不同read函数分类：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#read()</span></span><br><span class="line">content = f.read()        <span class="comment">#一次性全部读出来</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#readline()</span></span><br><span class="line">content = f.readline()        <span class="comment">#一行一行的读,和C++一样，执行一次读一行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#readlines()</span></span><br><span class="line">content = f.readlines()        <span class="comment">#全部读出来，每行存储成一个列表的元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#for循环 **建议使用**</span></span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-文件定位-文件指针"><a href="#4-文件定位-文件指针" class="headerlink" title="4. 文件定位(文件指针)"></a>4. 文件定位(文件指针)</h3><p>tell()方法告诉你文件内的当前位置, 换句话说，下一次的读写会发生在文件开头这么多字节之后。</p>
+<p><code>seek(offset [,from])</code>方法改变当前文件的位置。<code>offset</code>变量表示要移动的字节数。<code>from</code>变量指定开始移动字节的参考位置。</p>
+<ul>
+<li>如果<code>from</code>被设为0，这意味着将文件的开头作为移动字节的参考位置。</li>
+<li>如果设为1，则使用当前的位置作为参考位置。</li>
+<li>如果它被设为2，那么该文件的末尾将作为参考位置。</li>
+</ul>
+<p>例子：</p>
+<p>就用我们上面创建的文件foo.txt。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"r+"</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"读取的字符串是 : "</span>, str</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = fo.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"当前文件位置 : "</span>, position</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 把指针再次重新定位到文件开头</span></span><br><span class="line">position = fo.seek(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"重新读取字符串 : "</span>, str</span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
+
+<p>以上实例输出结果：</p>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">读取的字符串是 :  <span class="type">www.runoob</span></span><br><span class="line">当前文件位置 :  10</span><br><span class="line">重新读取字符串 :  <span class="type">www.runoob</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-重命名和删除文件"><a href="#5-重命名和删除文件" class="headerlink" title="5. 重命名和删除文件"></a>5. 重命名和删除文件</h3><p>Python的os模块提供了帮你执行文件处理操作的方法，比如重命名和删除文件。</p>
+<p>要使用这个模块，你必须先导入它，然后才可以调用相关的各种功能。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-1-rename-方法："><a href="#5-1-rename-方法：" class="headerlink" title="5.1 rename()方法："></a>5.1 rename()方法：</h4><p><code>rename()</code>方法需要两个参数，当前的文件名和新文件名。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.rename(current_file_name, new_file_name)</span><br></pre></td></tr></table></figure>
+
+
+<p>例子：</p>
+<p>下例将重命名一个已经存在的文件test1.txt。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重命名文件test1.txt为test2.txt。</span></span><br><span class="line">os.rename( <span class="string">"test1.txt"</span>, <span class="string">"test2.txt"</span> )</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-remove-方法"><a href="#5-2-remove-方法" class="headerlink" title="5.2 remove()方法"></a>5.2 remove()方法</h4><p>你可以用<code>remove()</code>方法删除文件，需要提供要删除的文件名作为参数。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.remove(file_name)</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<p>下例将删除一个已经存在的文件test2.txt。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除一个已经存在的文件test2.txt</span></span><br><span class="line">os.remove(<span class="string">"test2.txt"</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-目录操作："><a href="#6-目录操作：" class="headerlink" title="6. 目录操作："></a>6. 目录操作：</h3><p>所有文件都包含在各个不同的目录下，不过Python也能轻松处理。os模块有许多方法能帮你创建，删除和更改目录。</p>
+<h4 id="6-1-mkdir-方法"><a href="#6-1-mkdir-方法" class="headerlink" title="6.1 mkdir()方法"></a>6.1 mkdir()方法</h4><p>可以使用os模块的<code>mkdir()</code>方法在当前目录下创建新的目录们。你需要提供一个包含了要创建的目录名称的参数。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.mkdir(<span class="string">"newdir"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<p>下例将在当前目录下创建一个新目录test。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建目录test</span></span><br><span class="line">os.mkdir(<span class="string">"test"</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-2-chdir-方法"><a href="#6-2-chdir-方法" class="headerlink" title="6.2 chdir()方法"></a>6.2 chdir()方法</h4><p>可以用<code>chdir()</code>方法来改变当前的目录。<code>chdir()</code>方法需要的一个参数是你想设成当前目录的目录名称。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.chdir(<span class="string">"newdir"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<p>下例将进入”/home/newdir”目录。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 将当前目录改为"/home/newdir"</span></span><br><span class="line">os.chdir(<span class="string">"/home/newdir"</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-3-getcwd-方法："><a href="#6-3-getcwd-方法：" class="headerlink" title="6.3 getcwd()方法："></a>6.3 getcwd()方法：</h4><p><code>getcwd()</code>方法显示当前的工作目录。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.getcwd()</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<p>下例给出当前目录：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 给出当前的目录</span></span><br><span class="line"><span class="keyword">print</span> os.getcwd()</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="6-4-rmdir-方法"><a href="#6-4-rmdir-方法" class="headerlink" title="6.4 rmdir()方法"></a>6.4 rmdir()方法</h4><p><code>rmdir()</code>方法删除目录，目录名称以参数传递。</p>
+<p>在删除这个目录之前，它的所有内容应该先被清除。</p>
+<p>语法：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.rmdir(<span class="string">'dirname'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<p>以下是删除” /tmp/test”目录的例子。目录的完全合规的名称必须被给出，否则会在当前目录下搜索该目录。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除&amp;rdquo;/tmp/test&amp;rdquo;目录</span></span><br><span class="line">os.rmdir( <span class="string">"/tmp/test"</span>  )</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-文件、目录其他相关的方法"><a href="#7-文件、目录其他相关的方法" class="headerlink" title="7. 文件、目录其他相关的方法"></a>7. 文件、目录其他相关的方法</h3><p>File 对象和 OS 对象提供了很多文件与目录的操作方法，可以通过点击下面链接查看详情：</p>
+<ul>
+<li><a href="/python/file-methods.html">File 对象方法</a>: file 对象提供了操作文件的一系列方法。</li>
+<li><a href="/python/os-file-methods.html" target="_blank" rel="noopener noreferrer">OS 对象方法</a>: 提供了处理文件及目录的一系列方法。</li>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>I/O</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python编码问题——utf-8和gbk</title>
+    <url>/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/</url>
+    <content><![CDATA[<p>utf-8与gbk的区别：</p>
+<ul>
+<li><p>GBK是在国家标准GB2312基础上扩容后兼容GB2312的标准（好像还不是国家标准）。GBK编码专门用来解决中文编码的，是双字节的。不论中英文都是双字节的。GBK包含全部中文字符。</p>
+</li>
+<li><p><strong>utf-8</strong> 编码是用以解决国际上字符的一种多字节编码，它对英文使用8位（即一个字节），中文使用24位（三个字节）来编码。对于英文字符较多的论坛则用<strong>utf-8</strong>节省空间。另外，如果是外国人访问你的GBK网页，需要下载中文语言包支持。访问<strong>utf-8</strong>编码的网页则不出现这问题。可以直接访问。<strong>utf-8</strong>则包含全世界所有国家需要用到的字符。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190510180921437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ltRGVQYW5EYQ==,size_16,color_FFFFFF,t_70" alt=""></p>
+<p><strong>unicode</strong>其实是一种在操作过程中存在的字符状态，一般来讲，例如python中的str都是以<strong>unicode</strong>编码，在进行操作时会具化成为<strong>utf-8</strong>与<strong>gbk</strong>，往往是前者居多。</p>
+<p>如上图所示，在python中不同编码的转换都要经过Unicode，不论是UTF-8或者是GBK，整个过程都是先通过编码decode转换为Unicode告诉Unicode当前的编码格式是什么、然后再通过解码encode转换为自己想要实现的编码格式或类型。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">s = <span class="string">'你好'</span>  </span><br><span class="line"><span class="comment"># str类型，默认编码为unicode</span></span><br><span class="line">print(s.encode(<span class="string">"gbk"</span>)) </span><br><span class="line"><span class="comment"># Unicode转gbk</span></span><br><span class="line"><span class="comment"># 输出为：b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">s = s.encode(<span class="string">"gbk"</span>)</span><br><span class="line"><span class="comment"># 将gbk的s编码赋给s</span></span><br><span class="line">print(s)</span><br><span class="line"><span class="comment"># 显然输出为： b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **4**</span></span><br><span class="line">print(s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)) </span><br><span class="line"> <span class="comment"># Unicode转utf-8</span></span><br><span class="line"><span class="comment">#输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line"><span class="comment">#在这条语句中，由于先前s已经变成了gbk编码，所以得先解码变成unicode，再进行编码，否则报错</span></span><br><span class="line">s = s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)</span><br><span class="line">print(s)</span><br><span class="line"><span class="comment">#显然输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **6**</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
 </search>

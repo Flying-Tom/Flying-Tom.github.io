@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="I/O,Python," />
 
 
 
@@ -90,14 +90,18 @@
 
 
 
-<meta name="description" content="Who has seen the wind?Neither I nor you.But when the leaves hang trembling,The wind is passing through.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tom&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1.打印到屏幕最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下： 1234#!&#x2F;usr&#x2F;bin&#x2F;python# -*- coding: UTF-8 -*- print(&quot;abc123&quot;)  你的标准屏幕上会产生以下结果： 1abc123  2.读取键盘输入Python提供了两个内置函数从标准输入读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python I&#x2F;O基本操作">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/Python%20IO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Tom&#39;s Blog">
-<meta property="og:description" content="Who has seen the wind?Neither I nor you.But when the leaves hang trembling,The wind is passing through.">
+<meta property="og:description" content="1.打印到屏幕最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下： 1234#!&#x2F;usr&#x2F;bin&#x2F;python# -*- coding: UTF-8 -*- print(&quot;abc123&quot;)  你的标准屏幕上会产生以下结果： 1abc123  2.读取键盘输入Python提供了两个内置函数从标准输入读">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-14T15:52:23.000Z">
+<meta property="article:modified_time" content="2020-07-14T15:54:49.275Z">
 <meta property="article:author" content="Tom Forest">
+<meta property="article:tag" content="I&#x2F;O">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 
@@ -128,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/14/Python IO基本操作/"/>
 
 
 
 
 
-  <title>Tom's Blog - A dreamer <i class="fa fa-wpexplorer" aria-hidden="true"></i> <br> Flying after light</title>
+  <title>Python I/O基本操作 | Tom's Blog</title>
   
 
 
@@ -153,8 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/Flying-Tom" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -290,144 +293,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/" itemprop="url">python编码问题——utf-8和gbk</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-14T23:56:37+08:00">
-                2020-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>utf-8与gbk的区别：</p>
-<ul>
-<li><p>GBK是在国家标准GB2312基础上扩容后兼容GB2312的标准（好像还不是国家标准）。GBK编码专门用来解决中文编码的，是双字节的。不论中英文都是双字节的。GBK包含全部中文字符。</p>
-</li>
-<li><p><strong>utf-8</strong> 编码是用以解决国际上字符的一种多字节编码，它对英文使用8位（即一个字节），中文使用24位（三个字节）来编码。对于英文字符较多的论坛则用<strong>utf-8</strong>节省空间。另外，如果是外国人访问你的GBK网页，需要下载中文语言包支持。访问<strong>utf-8</strong>编码的网页则不出现这问题。可以直接访问。<strong>utf-8</strong>则包含全世界所有国家需要用到的字符。</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20190510180921437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ltRGVQYW5EYQ==,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><strong>unicode</strong>其实是一种在操作过程中存在的字符状态，一般来讲，例如python中的str都是以<strong>unicode</strong>编码，在进行操作时会具化成为<strong>utf-8</strong>与<strong>gbk</strong>，往往是前者居多。</p>
-<p>如上图所示，在python中不同编码的转换都要经过Unicode，不论是UTF-8或者是GBK，整个过程都是先通过编码decode转换为Unicode告诉Unicode当前的编码格式是什么、然后再通过解码encode转换为自己想要实现的编码格式或类型。</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'你好'</span>  </span><br><span class="line"><span class="comment"># str类型，默认编码为unicode</span></span><br><span class="line">print(s.encode(<span class="string">"gbk"</span>)) </span><br><span class="line"><span class="comment"># Unicode转gbk</span></span><br><span class="line"><span class="comment"># 输出为：b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">s = s.encode(<span class="string">"gbk"</span>)</span><br><span class="line"><span class="comment"># 将gbk的s编码赋给s</span></span><br><span class="line">print(s)</span><br><span class="line"><span class="comment"># 显然输出为： b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **4**</span></span><br><span class="line">print(s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)) </span><br><span class="line"> <span class="comment"># Unicode转utf-8</span></span><br><span class="line"><span class="comment">#输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line"><span class="comment">#在这条语句中，由于先前s已经变成了gbk编码，所以得先解码变成unicode，再进行编码，否则报错</span></span><br><span class="line">s = s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)</span><br><span class="line">print(s)</span><br><span class="line"><span class="comment">#显然输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **6**</span></span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -457,9 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/14/Python%20IO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url">Python I/O基本操作</a></h1>
+          <h1 class="post-title" itemprop="name headline">Python I/O基本操作</h1>
         
 
         <div class="post-meta">
@@ -531,9 +397,7 @@
       
 
       
-        
-          
-            <h3 id="1-打印到屏幕"><a href="#1-打印到屏幕" class="headerlink" title="1.打印到屏幕"></a>1.打印到屏幕</h3><p>最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下：</p>
+        <h3 id="1-打印到屏幕"><a href="#1-打印到屏幕" class="headerlink" title="1.打印到屏幕"></a>1.打印到屏幕</h3><p>最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"abc123"</span>)</span><br></pre></td></tr></table></figure>
 
 <p>你的标准屏幕上会产生以下结果：</p>
@@ -809,8 +673,6 @@
 <ul>
 <li><a href="/python/file-methods.html">File 对象方法</a>: file 对象提供了操作文件的一系列方法。</li>
 <li><a href="/python/os-file-methods.html" target="_blank" rel="noopener noreferrer">OS 对象方法</a>: 提供了处理文件及目录的一系列方法。</li>
-          
-        
       
     </div>
     
@@ -818,6 +680,12 @@
     
 
     <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------That's all.<i class="fa fa-heart "></i>Thanks for your reading !-------------</div>
+    
+</div>
       
     </div>
 
@@ -829,1099 +697,57 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/13/html%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/13/html%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/" itemprop="url">html颜色代码大全</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-13T00:58:18+08:00">
-                2020-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/html/" itemprop="url" rel="index">
-                    <span itemprop="name">html</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/I-O/" rel="tag"><i class="fa fa-tag"></i> I/O</a>
           
-
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
+      
+        <div class="post-widgets">
         
-          <p>以下是DIVCSS5整理常用的HTML颜色表</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/13/html%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/#more" rel="contents">
-              Read more &raquo;
-            </a>
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
-          <!--/noindex-->
         
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/12/%E5%BF%AB%E9%80%9F%E4%B9%98%E6%80%BB%E7%BB%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/12/%E5%BF%AB%E9%80%9F%E4%B9%98%E6%80%BB%E7%BB%93/" itemprop="url">快速乘总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-12T23:49:54+08:00">
-                2020-07-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
-        
-          
-            <p>因为我们知道乘法有的时候会溢出，即使是 long long 也可能在乘法时因为结果过大溢出（当模数也是 long long ）。所以我们需要寻找一种能高效完成乘法操作并且不会爆 long long 的算法，也就是快速乘。本文也将对几种常用快速乘及其优化技巧做个总结。<br><br /></p>
-<hr>
-<h4 id="1-复杂度为-O-log-的快速乘："><a href="#1-复杂度为-O-log-的快速乘：" class="headerlink" title="1. 复杂度为 O(log) 的快速乘："></a>1. 复杂度为 O(log) 的快速乘：</h4><p>我们知道乘法其实就是把很多个加法运算合到一起。现在我们的乘法会爆范围，那我们就把它转化为加法。但是我们不可能一个一个的加，这样复杂度会是$O(n)$ 级别。所以我们模仿2进制加法操作来完成。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll p)</span><span class="comment">//计算x乘y的积</span></span></span><br><span class="line"><span class="function"></span>&#123;               </span><br><span class="line">    ll res = <span class="number">0</span>; <span class="comment">//加法初始化</span></span><br><span class="line">    <span class="keyword">while</span> (y)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (y &amp; <span class="number">1</span>)</span><br><span class="line">            res = (res + x) % p; <span class="comment">//模仿二进制</span></span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) % p;</span><br><span class="line">        y &gt;&gt;= <span class="number">1</span>; <span class="comment">//将x不断乘2达到二进制</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ll 表示 long long</span></span><br></pre></td></tr></table></figure>
-<p>当然我们不一定要仿照2进制，也可以是其他进制，<strong>只要中间算每一位上数字代表值时不会爆 longlong 就行！</strong></p>
-<h4 id="2-优秀的-STL-结构：-int128"><a href="#2-优秀的-STL-结构：-int128" class="headerlink" title="2. 优秀的 STL 结构：__int128"></a>2. 优秀的 STL 结构：__int128</h4><p>__int128是c++自带的一个数据类型，顾名思义，它可以装下 $2^{128}$ 级别的大数据，而且可以直接进行各种加减乘除之类的操作（复杂度很接近$ O(1) $），不过它需要手写输出（但其实我们只需要在运算时用一下就可以了，就像下面这样：）</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans=((__int128)x*y)%p</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-非常优秀的-O-1-快速乘"><a href="#3-非常优秀的-O-1-快速乘" class="headerlink" title="3. 非常优秀的 $O(1)$ 快速乘"></a>3. 非常优秀的 $O(1)$ 快速乘</h4><p>这个东西最初我感觉很不靠谱，但它就是能算出来正确答案。它就是用 long double 来进行优化取模运算。让我们先看一代码实现吧：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll z = (ld)x / p * y;</span><br><span class="line">    ll res = (ull)x * y - (ull)z * p;</span><br><span class="line">    <span class="keyword">return</span> (res + p) % p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ll 表示 long long</span></span><br><span class="line"><span class="comment">// ld 表示 long double</span></span><br><span class="line"><span class="comment">// ull 表示 unsigned long long</span></span><br><span class="line"><span class="comment">// 一种自动溢出的数据类型（存满了就会自动变为0）</span></span><br></pre></td></tr></table></figure>
-<p>看到这份代码有没有感到十分奇怪？ 它中间是直接用了乘法操作的啊！这不直接爆掉了吗？</p>
-<p>但是它就是可以算出正确答案来。因为它其实很巧妙的运用了自动溢出这个操作，我们的代码中的z就表示$ ⌊x×y/p⌋ $，所以我们要求的就变成了 $x×y−⌊x×y/p⌋×p $，虽然这两个部分都是会溢出的，但（unsigned）保证了它们溢出后的差值基本不变，所以即使它会溢出也不会影响最终结果的！</p>
-<h4 id="4-关于快速乘的灵活转化"><a href="#4-关于快速乘的灵活转化" class="headerlink" title="4.关于快速乘的灵活转化"></a>4.关于快速乘的灵活转化</h4><p>我们知道快速乘的原理其实就是乘法转加法（上面这种不算），但是这是可以根据题目性质灵活转变的，我们如何转成加法决定了我们的复杂度，就像如果模数并没有超过int范围很多，那我们适当的运用乘法分配律可以让复杂度非常接近 $O(1)$ ：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll P)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll L = x * (y &gt;&gt; <span class="number">25</span>) % P * (<span class="number">1</span> &lt;&lt; <span class="number">25</span>) % P;</span><br><span class="line">    ll R = x * (y &amp; ((<span class="number">1</span> &lt;&lt; <span class="number">25</span>) - <span class="number">1</span>)) % P;</span><br><span class="line">    <span class="keyword">return</span> (L + R) % P;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在保证运算不会爆long long的前提下，我们可以尽量优化其复杂度，就像上述代码在模数小于$10^{12}$ 的情况下完全变成了$O(1)$级别，在某些题目中会十分优秀！</p>
-<h4 id="5-一些经常需要快速乘的算法："><a href="#5-一些经常需要快速乘的算法：" class="headerlink" title="5. 一些经常需要快速乘的算法："></a>5. 一些经常需要快速乘的算法：</h4><h4 id="-millerrabin--判大质数"><a href="https://www.cnblogs.com/812-xiao-wen/p/10543928.html" target="_blank" rel="noopener"> <font size="3" color="red"> $ Miller~rabin $ 判大质数</a></h4>
-<h4 id="-pollardrho--大数因子寻找"><a href="https://www.cnblogs.com/812-xiao-wen/p/10544546.html" target="_blank" rel="noopener"> <font size="3" color="red"> $ Pollard~Rho $ 大数因子寻找</a></h4>
-<h4 id="-bsgs--大步小步算法"><a href="https://www.cnblogs.com/812-xiao-wen/p/10560908.html" target="_blank" rel="noopener"> <font size="3"  color="red"> $ BSGS $ 大步小步算法 </a></h4>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/Scheduler/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/26/Scheduler/" itemprop="url">Scheduler</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-26T01:55:24+08:00">
-                2020-04-26
-              </time>
+              <a href="/2020/07/13/html%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/" rel="next" title="html颜色代码大全">
+                <i class="fa fa-chevron-left"></i> html颜色代码大全
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/oj/" itemprop="url" rel="index">
-                    <span itemprop="name">oj</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>讲真，没有de过这么长时间的代码</p>
-<p>前前后后将近重写了三次，因为一开始选择的写法貌似不是正解因而寸步难行</p>
-<p>星期四晚上好不容易写出了1ed，星期五de了一天到12点决定作废。</p>
-<p>然后一直写到4点多，写出了2ed，原以为会A的。</p>
-<p>结果折腾到下午4点，从WA97到WA73到WA38到WA28，还是没有出结果，一直卡在了WA28</p>
-<p>挂出这段让人心碎的随机调度代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Task</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id,type,atime,btime;</span><br><span class="line">&#125; tasktmp;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> act,bct,ansat,ansbt,idA,idB;</span><br><span class="line">&#125; ti[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> n,t1=<span class="number">0</span>,t2=<span class="number">0</span>,t3=<span class="number">0</span>,num=<span class="number">0</span>,anstime=<span class="number">0x3f3f3f3f</span>,l1=<span class="number">0</span>,l2=<span class="number">0</span>,id[<span class="number">3</span>][<span class="number">100</span>]=&#123;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt; taskA,taskB,task1,task2,task3,part1,part2;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exchange</span><span class="params">(<span class="built_in">Task</span> x, <span class="built_in">Task</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">Task</span> tmp;</span><br><span class="line">    tmp = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = tmp;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ans</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> timeA = <span class="number">0</span>, timeB = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l1; i++)</span><br><span class="line">    	tasktmp=part1[i],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n;i++)</span><br><span class="line">		tasktmp=part2[i-l1],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l2; i++)</span><br><span class="line">    	tasktmp=part2[i],taskB.push_back(tasktmp);</span><br><span class="line">    	</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n;i++)</span><br><span class="line">		tasktmp=part1[i-l2],taskB.push_back(tasktmp);</span><br><span class="line">    <span class="comment">//////////////////initial</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l1; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i].act=timeA; </span><br><span class="line">		timeA+=taskA[i].atime; </span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = l1; i&lt;n; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i-l1].bct=timeB;</span><br><span class="line">		timeB+=taskB[i-l1].btime;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///A processor judge</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeA&gt;=ti[i-l1].bct+taskA[i-l1].btime )</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeA=ti[i-l1].bct+taskA[i-l1].btime;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///B processor judge</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeB&gt;=ti[i-l2].act+taskA[i-l2].atime)</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeB=ti[i-l2].act+taskA[i-l2].atime;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">max</span>(timeA,timeB)&lt;anstime)</span><br><span class="line">    &#123;</span><br><span class="line">        anstime=<span class="built_in">max</span>(timeA,timeB);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	ti[i].ansat=ti[i].act;</span><br><span class="line">        	ti[i].ansbt=ti[i].bct;</span><br><span class="line">        	ti[i].idA=taskA[i].id;</span><br><span class="line">        	ti[i].idB=taskB[i].id;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    taskA.<span class="built_in">clear</span>();</span><br><span class="line">    taskB.<span class="built_in">clear</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (pos &gt; num<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        l1=task1.<span class="built_in">size</span>();l2=task2.<span class="built_in">size</span>();</span><br><span class="line">        </span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l1;i++)</span><br><span class="line">			tasktmp=task1[i],part1.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l2;i++)</span><br><span class="line">			tasktmp=task2[i],part2.push_back(tasktmp);</span><br><span class="line">	</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="keyword">if</span>(l1&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> a1=rand()%l1,a2=rand()%l1;</span><br><span class="line">				exchange(part1[a1], part1[a2]);</span><br><span class="line">			&#125;</span><br><span class="line">    		<span class="keyword">if</span>(l2&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> b1=rand()%l2,b2=rand()%l2;</span><br><span class="line">				exchange(part2[b1], part2[b2]);</span><br><span class="line">			&#125;</span><br><span class="line">            ans();   </span><br><span class="line">        &#125;</span><br><span class="line">        part1.<span class="built_in">clear</span>();</span><br><span class="line">        part2.<span class="built_in">clear</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> 		<span class="built_in">Task</span> tt=task3[pos];</span><br><span class="line"> 		</span><br><span class="line"> 		tt.type=<span class="number">1</span>;task1.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);</span><br><span class="line">	    <span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt;::iterator it=task1.<span class="built_in">end</span>();it--;task1.erase(it);</span><br><span class="line">	    </span><br><span class="line">	    tt.type=<span class="number">2</span>;task2.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);it=task2.<span class="built_in">end</span>();it--;task2.erase(it);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    srand(<span class="keyword">unsigned</span>(<span class="number">114514</span>));  </span><br><span class="line">    srand(<span class="keyword">unsigned</span>(time(<span class="literal">nullptr</span>)));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;t1,&amp;t2,&amp;t3);</span><br><span class="line">        tasktmp.id = i;</span><br><span class="line">        tasktmp.type = t1;</span><br><span class="line">        tasktmp.atime = t2;</span><br><span class="line">        tasktmp.btime = t3;</span><br><span class="line">        <span class="keyword">switch</span>(t1)</span><br><span class="line">		&#123;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">1</span>: task1.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">2</span>: task2.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">3</span>: task3.push_back(tasktmp);num++;<span class="keyword">break</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    num=task3.<span class="built_in">size</span>();</span><br><span class="line">    solve(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, anstime);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"A %d %d\n"</span>, ti[i].ansat, ti[i].idA);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"B %d %d\n"</span>, ti[i].ansbt, ti[i].idB);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>心态♥真的炸了，👴♥累，再也不想写OJ了，这日子比高三还要苦</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/23/Vscode-WSL%E9%83%A8%E7%BD%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/23/Vscode-WSL%E9%83%A8%E7%BD%B2/" itemprop="url">Vscode+WSL部署</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-23T05:25:32+08:00">
-                2020-04-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vscode/" itemprop="url" rel="index">
-                    <span itemprop="name">Vscode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/Markdown%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/22/Markdown%E7%AC%94%E8%AE%B0/" itemprop="url">Markdown笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-22T21:43:19+08:00">
-                2020-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>（我又稍微修改了一下这篇文章🕵️‍♂️）</p>
-<h4 id="一-Markdown是什么？"><a href="#一-Markdown是什么？" class="headerlink" title="一. Markdown是什么？"></a>一. Markdown是什么？</h4><p><strong>Markdown</strong>是一种轻量级<strong>标记语言</strong>，它以纯文本形式(<em>易读、易写、易更改</em>)编写文档，并最终以HTML格式发布。<br><strong>Markdown</strong>也可以理解为将以MARKDOWN语言编写的语言转换成HTML内容的工具，最初是一个perl脚本<em>Markdown.pl</em>。    </p>
-<h5 id="👴为什么要用它？"><a href="#👴为什么要用它？" class="headerlink" title="👴为什么要用它？"></a>👴为什么要用它？</h5><ul>
-<li>它观感极佳、语法简单(相对于Latex)、沉浸式文本编辑(理论上不需要动鼠标，呜呜呜word又要调字号了(🤦‍♂️))。而且它的逼格高(。</li>
-<li>兼容HTML，可以转换为HTML格式发布。</li>
-<li>很多的主流网站都支持Markdown语法(Stackoverflow,CSDN,洛谷，某乎好像也支持)。</li>
-<li>排版效果不亚于一般的文档处理软件，方便阅读</li>
-<li>身边人都在用（呜呜呜）。</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/22/Markdown%E7%AC%94%E8%AE%B0/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/Vscode%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/22/Vscode%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url">Vscode环境配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-22T01:19:08+08:00">
-                2020-04-22
-              </time>
+              <a href="/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/" rel="prev" title="python编码问题——utf-8和gbk">
+                python编码问题——utf-8和gbk <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vscode/" itemprop="url" rel="index">
-                    <span itemprop="name">Vscode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><i class="fa fa-battery-quarter" aria-hidden="true"></i> 呜呜呜我太困了明天（早上一定更新😭😭😭</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 明天还有大物课<i class="fa fa-bolt" aria-hidden="true"></i></li>
-</ul>
-<hr>
-<p>咕咕咕更新了🐦</p>
-<p><a href="http://www.mingw-w64.org/doku.php" target="_blank" rel="noopener">MinGw</a>和<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Vscode</a>的安装我就不细说的，百度一下就可以了（点击超链接有惊喜👋）</p>
-<h4 id="搭建C-运行环境时的两个设置文件如何配置："><a href="#搭建C-运行环境时的两个设置文件如何配置：" class="headerlink" title="搭建C++运行环境时的两个设置文件如何配置："></a>搭建C++运行环境时的两个设置文件如何配置：</h4>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/22/Vscode%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/Blog%E5%B0%8F%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tom Forest">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tom's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/21/Blog%E5%B0%8F%E8%AE%B0/" itemprop="url">Blog小记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-21T07:58:52+08:00">
-                2020-04-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>呜呜呜，整了一天终于把自己的blog打理好了，</p>
-<ul>
-<li><input disabled="" type="checkbox"> <p>下午的微积分课还没听</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>上周的大物课还没听，大物作业也咕咕咕了，马上还要大物期中考试</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>明天还有问求课，不过害好是🐜🐜的课</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>又是不会Oj的一周，随机算法杀我</p>
-</li>
-<li><input checked="" disabled="" type="checkbox"> <p>啥都不说了，早点睡吧(×)</p>
-</li>
-</ul>
-<hr>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1931,10 +757,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1942,6 +769,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1964,8 +795,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2054,6 +894,24 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-打印到屏幕"><span class="nav-text">1.打印到屏幕</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-读取键盘输入"><span class="nav-text">2.读取键盘输入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-raw-input函数"><span class="nav-text">2.1 raw_input函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-input函数"><span class="nav-text">2.2 input函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-打开和关闭文件"><span class="nav-text">3. 打开和关闭文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-open-函数"><span class="nav-text">3.1 open 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-File对象的属性"><span class="nav-text">3.2 File对象的属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-读写文件"><span class="nav-text">3.2 读写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-1-close-方法"><span class="nav-text">3.2.1 close()方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2-write-方法"><span class="nav-text">3.2.2 write()方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-3-read-方法"><span class="nav-text">3.2.3 read()方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-text">
+例子：
+</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-文件定位-文件指针"><span class="nav-text">4. 文件定位(文件指针)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-重命名和删除文件"><span class="nav-text">5. 重命名和删除文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-rename-方法："><span class="nav-text">5.1 rename()方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-remove-方法"><span class="nav-text">5.2 remove()方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-目录操作："><span class="nav-text">6. 目录操作：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-mkdir-方法"><span class="nav-text">6.1 mkdir()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-chdir-方法"><span class="nav-text">6.2 chdir()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-getcwd-方法："><span class="nav-text">6.3 getcwd()方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-rmdir-方法"><span class="nav-text">6.4 rmdir()方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-文件、目录其他相关的方法"><span class="nav-text">7. 文件、目录其他相关的方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -2199,6 +1057,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
