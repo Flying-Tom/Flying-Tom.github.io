@@ -305,6 +305,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/python%E4%B8%AD%E7%9A%84%E6%96%9C%E6%9D%A0%E5%92%8C%E5%8F%8D%E6%96%9C%E6%9D%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tom Forest">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tom's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/15/python%E4%B8%AD%E7%9A%84%E6%96%9C%E6%9D%A0%E5%92%8C%E5%8F%8D%E6%96%9C%E6%9D%A0/" itemprop="url">python中的斜杠和反斜杠</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-15T00:25:25+08:00">
+                2020-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>首先，”/“左倾斜是正斜杠,”&quot;右倾斜是反斜杠,可以记为：除号是正斜杠一般来说对于目录分隔符，Unix和Web用正斜杠/，Windows用反斜杠，但是现在Windows</p>
+<h4 id="一、目录中的斜杠"><a href="#一、目录中的斜杠" class="headerlink" title="一、目录中的斜杠"></a>一、目录中的斜杠</h4><p>python读文件需要输入的目录参数，列出以下例子：</p>
+<p>path = r”C:\Windows\temp\readme.txt”</p>
+<p>path1 = r”c:\windows\temp\readme.txt”</p>
+<p>path2 = “c:\windows\temp\readme.txt”</p>
+<p>path3 = “c:/windows/temp/readme.txt”</p>
+<p>打开文件函数open()中的参数可以是path也可以是path1、path2、path3。</p>
+<p>path：”&quot;为字符串中的特殊字符，加上r后变为原始字符串，则不会对字符串中的”\t”、”\r”        进行字符串转义</p>
+<p>path1：大小写不影响windows定位到文件</p>
+<p>path2：用一个”&quot;取消第二个”&quot;的特殊转义作用，即为”\“</p>
+<p>*path3：用正斜杠做目录分隔符也可以转到对应目录，并且在python中path3的方式也省去了反斜杠\转义的烦恼</p>
+<h4 id="二、正则表达式中的斜杠"><a href="#二、正则表达式中的斜杠" class="headerlink" title="二、正则表达式中的斜杠"></a>二、正则表达式中的斜杠</h4><p>正则表达式匹配反斜杠”&quot;，为什么是”\\“或是 r”\“呢？</p>
+<p>因为在正则表达式中\为特殊符号，为了取消它在正则表达式中的特殊意义需要加一个\就变成了\，但是问题又来了，\也是字符串中的特殊字符，所以又要分别对两个\取消其特殊意义，即为\\。Python中有一个原始字符串操作符，用于那些字符串中出现特殊字符，在原始字符串中，没有转义字符和不能打印的字符。这样就可以取消了\在字符串中的转义功能，即r”\“。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -346,6 +504,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -560,6 +740,20 @@
 
 <h3 id="3-打开和关闭文件"><a href="#3-打开和关闭文件" class="headerlink" title="3. 打开和关闭文件"></a>3. 打开和关闭文件</h3><p>现在，您已经可以向标准输入和输出进行读写。现在，来看看怎么读写实际的数据文件。</p>
 <p>Python 提供了必要的函数和方法进行默认情况下的文件基本操作。你可以用 <strong>file</strong> 对象做大部分的文件操作。</p>
+<p><strong>注意：在window下用\表示路径，而在linux都是用/表示路径。</strong></p>
+<h4 id="3-1-文件路径"><a href="#3-1-文件路径" class="headerlink" title="3.1 文件路径"></a>3.1 文件路径</h4><h5 id="3-1-1-和"><a href="#3-1-1-和" class="headerlink" title="3.1.1 /和\"></a>3.1.1 /和\</h5><p>在window下用\表示路径（准确的说是正反都可(?)），而在linux都是用/表示路径</p>
+<h5 id="3-1-2-字符串前面加上’r’的作用"><a href="#3-1-2-字符串前面加上’r’的作用" class="headerlink" title="3.1.2 字符串前面加上’r’的作用"></a>3.1.2 字符串前面加上’r’的作用</h5><p>在打开文件的时候open(r’c:.…’)，加r和不加’’r是有区别的</p>
+<p>‘r’是防止字符转义的 如果路径中出现’\t’的话 不加r的话\t就会被转义 而加了’r’之后’\t’就能保留原有的样子</p>
+<p>在字符串赋值的时候 前面加’r’可以防止字符串在时候的时候不被转义 原理是在转义字符前加’&#39;</p>
+<p>例：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">r'\tt'</span></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'\tt'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">'\tt'</span></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'t'</span></span><br></pre></td></tr></table></figure>
+
+<p>在Python的string前面加上‘r’， 是为了告诉编译器这个string是个raw string，不要转意backslash ‘&#39; 。 例如，\n 在raw string中，是两个字符，\和n， 而不会转意为换行符。由于正则表达式和 \ 会有冲突，因此，当一个字符串使用了正则表达式后，最好在前面加上’r’。</p>
 <h4 id="3-1-open-函数"><a href="#3-1-open-函数" class="headerlink" title="3.1 open 函数"></a>3.1 open 函数</h4><p>你必须先用Python内置的open()函数打开一个文件，创建一个file对象，相关的方法才可以调用它进行读写。</p>
 <p>语法：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file object = open(file_name [, access_mode][, buffering])</span><br></pre></td></tr></table></figure>
@@ -1980,7 +2174,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
