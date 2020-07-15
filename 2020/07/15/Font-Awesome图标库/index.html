@@ -1,1706 +1,402 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Markdown笔记</title>
-    <url>/2020/04/22/Markdown%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>（我又稍微修改了一下这篇文章🕵️‍♂️）</p>
-<h4 id="一-Markdown是什么？"><a href="#一-Markdown是什么？" class="headerlink" title="一. Markdown是什么？"></a>一. Markdown是什么？</h4><p><strong>Markdown</strong>是一种轻量级<strong>标记语言</strong>，它以纯文本形式(<em>易读、易写、易更改</em>)编写文档，并最终以HTML格式发布。<br><strong>Markdown</strong>也可以理解为将以MARKDOWN语言编写的语言转换成HTML内容的工具，最初是一个perl脚本<em>Markdown.pl</em>。    </p>
-<h5 id="👴为什么要用它？"><a href="#👴为什么要用它？" class="headerlink" title="👴为什么要用它？"></a>👴为什么要用它？</h5><ul>
-<li>它观感极佳、语法简单(相对于Latex)、沉浸式文本编辑(理论上不需要动鼠标，呜呜呜word又要调字号了(🤦‍♂️))。而且它的逼格高(。</li>
-<li>兼容HTML，可以转换为HTML格式发布。</li>
-<li>很多的主流网站都支持Markdown语法(Stackoverflow,CSDN,洛谷，某乎好像也支持)。</li>
-<li>排版效果不亚于一般的文档处理软件，方便阅读</li>
-<li>身边人都在用（呜呜呜）。</li>
-</ul>
-<a id="more"></a>
-<hr>
-<p>(分隔线)</p>
-<h4 id="二、行内语法"><a href="#二、行内语法" class="headerlink" title="二、行内语法"></a>二、行内语法</h4><h5 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h5><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p>
-<blockquote>
-<p>一级标题<br><code>=========</code><br>二级标题<br><code>---------</code></p>
-</blockquote>
-<p>效果：</p>
-<blockquote>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题   "></a>一级标题   </h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2></blockquote>
-<p>2）使用<code>#</code>，可表示1-6级标题。</p>
-<blockquote>
-<p># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题    </p>
-</blockquote>
-<h5 id="2-2-段落"><a href="#2-2-段落" class="headerlink" title="2.2 段落"></a>2.2 段落</h5><p>段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用<strong>两个以上</strong>空格加上回车（引用中换行省略回车）。</p>
-<h5 id="2-3-区块引用"><a href="#2-3-区块引用" class="headerlink" title="2.3 区块引用"></a>2.3 区块引用</h5><p>在段落的每行或者只在第一行使用符号<code>&gt;</code>,还可使用多个嵌套引用，如：</p>
-<blockquote>
-<p>&gt; 区块引用<br>&gt;&gt; 嵌套引用  </p>
-</blockquote>
-<p>效果：</p>
-<blockquote>
-<p>区块引用  </p>
-<blockquote>
-<p>嵌套引用 </p>
-</blockquote>
-</blockquote>
-<h5 id="2-4-斜体、粗体、删除线、下划线、背景高亮"><a href="#2-4-斜体、粗体、删除线、下划线、背景高亮" class="headerlink" title="2.4 斜体、粗体、删除线、下划线、背景高亮"></a>2.4 斜体、粗体、删除线、下划线、背景高亮</h5><figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*斜体*</span>或<span class="emphasis">_斜体_</span></span><br><span class="line">*<span class="strong">*粗体*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span>*<span class="strong">*加粗斜体*</span>*<span class="strong">*</span></span><br><span class="line"><span class="strong">~~删除线~~</span></span><br><span class="line"><span class="strong">++下划线++</span></span><br><span class="line"><span class="strong">==背景高亮==</span></span><br></pre></td></tr></table></figure>
-<p>效果：<br><em>斜体</em>或<em>斜体</em><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del><br>++下划线++<br>==背景高亮==</p>
-<p>效果：<br> <em>斜体</em>，<em>斜体</em><br> <strong>粗体</strong>，<strong>粗体</strong></p>
-<h5 id="2-5-列表和任务列表"><a href="#2-5-列表和任务列表" class="headerlink" title="2.5 列表和任务列表"></a>2.5 列表和任务列表</h5><ul>
-<li>列表<br>使用<code>·</code>、<code>+</code>、或<code>-</code>标记无序列表，如：<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">\-</span>（+<span class="symbol">\*</span>） 第一项</span><br><span class="line"><span class="symbol">\-</span>（+<span class="symbol">\*</span>） 第二项</span><br><span class="line"><span class="symbol">\-</span> （+<span class="symbol">\*</span>）第三项</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p><strong>注意</strong>：标记后面最少有一个空格\制表符。若不在引用区块中，必须和前方段落之间存在空行。<br>效果：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code>，如：<br>    1 . 第一项<br>    2 . 第二项<br>    3 . 第三项    </p>
-<p>效果：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<ul>
-<li>任务列表</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">+ <span class="selector-tag">-</span> <span class="selector-attr">[ ]</span> 任务一 未做任务 `<span class="selector-tag">-</span> + 空格 + <span class="selector-attr">[ ]</span>`</span><br><span class="line">  <span class="selector-tag">-</span> <span class="selector-attr">[x]</span> 任务二 已做任务 `<span class="selector-tag">-</span> + 空格 + <span class="selector-attr">[x]</span>`</span><br></pre></td></tr></table></figure>
-<p>就有✔勾选框的效果了</p>
-<ul>
-<li><input disabled="" type="checkbox"> 任务一 未做任务 <code>- + 空格 + [x]</code></li>
-<li><input checked="" disabled="" type="checkbox"> 任务二 已做任务 <code>- + 空格 + [x]</code></li>
-</ul>
-<h5 id="2-6-超链接、页内链接、自动链接、注脚"><a href="#2-6-超链接、页内链接、自动链接、注脚" class="headerlink" title="2.6 超链接、页内链接、自动链接、注脚"></a>2.6 超链接、页内链接、自动链接、注脚</h5><ul>
-<li>行内式<br>[]里写链接文字，()里写链接地址, ()中的””中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字，链接地址与title前有一个空格。</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">建议去 [<span class="string">Github</span>](<span class="link">(https://github.com/</span>))多fork</span><br></pre></td></tr></table></figure>
-<p>建议去 <a href="(https://github.com/)">Github</a>多fork</p>
-<ul>
-<li>参考式<br>参考式超链接一般用在学术论文上面，或者另一种情况，如果某一个链接在文章中多处使用，那么使用引用 的方式创建链接将非常好，它可以让你对链接进行统一的管理。</li>
-</ul>
-<p>语法说明：<br>参考式链接分为两部分，文中的写法 [链接文字][链接标记]，在文本的任意位置添加[链接标记]:链接地址。</p>
-<p>如果链接文字本身可以做为链接标记，你也可以写成[链接文字][]<br>[链接文字]：链接地址的形式，见代码的最后一行。<br>比如：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">我经常去的几个网站[<span class="string">Google</span>][<span class="symbol">1</span>]、[<span class="string">4399</span>][<span class="symbol">2</span>]。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">1</span>]:<span class="link">http://www.google.com </span></span><br><span class="line">[<span class="symbol">2</span>]:<span class="link">http://www.4399.com</span></span><br></pre></td></tr></table></figure>
-<p>效果如下：<br>我经常去的几个网站<a href="http://www.google.com" target="_blank" rel="noopener">Google</a>、<a href="http://www.4399.com" target="_blank" rel="noopener">4399</a>。</p>
-<ul>
-<li>注脚<br>在需要添加注脚的文字后加上脚注名字[^注脚名字],称为加注。 然后在文本的任意位置(一般在最后)添加脚注，脚注前必须有对应的脚注名字。</li>
-</ul>
-<p><strong>注意</strong>：经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经Markdown转换后，也会自动归类到文章的最后。</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2]。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]:<span class="link">Markdown是一种纯文本标记语言</span></span><br><span class="line"></span><br><span class="line">[<span class="symbol">^2</span>]:<span class="link">HyperText Markup Language 超文本标记语言</span></span><br></pre></td></tr></table></figure>
-<p>使用 Markdown<a href="Markdown是一种纯文本标记语言">^1</a>可以效率的书写文档, 直接转换成 HTML[^2]。</p>
-<p>[^2]:HyperText Markup Language 超文本标记语言</p>
-<p>注：脚注自动被搬运到最后面，请到文章末尾查看，脚注后方的链接可以直接跳转回到加注的地方。</p>
-<ul>
-<li>锚点（页内超链接）</li>
-<li>网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。还有下一节的注脚。这些根本上都是用锚点来实现的，只支持在标题后插入锚点，其它地方无效。</li>
-</ul>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">## <span class="number">0.</span> 目录&#123;#index&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>自动链接</li>
-</ul>
-<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="symbol">&amp;lt;</span>http://example.com/<span class="symbol">&amp;gt;</span> <span class="symbol">&amp;emsp;</span><span class="symbol">&amp;emsp;</span> </span><br><span class="line"><span class="symbol">&amp;lt;</span>address@example.com<span class="symbol">&amp;gt;</span></span><br></pre></td></tr></table></figure>
-<p>这样子就会显示为：<br>&lt;<a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>&gt; &emsp;&emsp;<br>&lt;<a href="mailto:address@example.com">address@example.com</a>&gt;</p>
-<hr>
-<h4 id="三、块语法"><a href="#三、块语法" class="headerlink" title="三、块语法"></a>三、块语法</h4><h5 id="3-1-内容目录"><a href="#3-1-内容目录" class="headerlink" title="3.1 内容目录"></a>3.1 内容目录</h5><p>在段落中填写<br>    <code>&gt;[TOC]</code> </p>
-<p>以显示全文内容的目录结构。<br>效果参见最上方的目录。</p>
-<h5 id="3-2-代码块"><a href="#3-2-代码块" class="headerlink" title="3.2 代码块"></a>3.2 代码块</h5><p>对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(Tab), 另一种是利用”`”符号（一般在ESC键下方）包裹代码。</p>
-<ul>
-<li><p>行内式<br>源码：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">C语言里的函数 `<span class="built_in">scanf</span>()` 怎么使用？</span><br></pre></td></tr></table></figure>
-
-<p>效果：<br>C语言里的函数 <code>scanf()</code> 怎么使用？</p>
-</li>
-<li><p>缩进式多行代码<br>缩进 4 个空格或是 1 个制表符,制表符的宽度一般的文本编辑器可以自己定义。<br>一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> &amp;lt;stdio.h&amp;gt;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(&amp;#<span class="number">34</span>;Hello world\n&amp;#<span class="number">34</span>;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>或者使用多个”`”来包裹代码</p>
-</li>
-</ul>
-<h5 id="3-3-HTML标签"><a href="#3-3-HTML标签" class="headerlink" title="3.3 HTML标签"></a>3.3 HTML标签</h5><p> Markdown语法中支持嵌套 Html 标签，比如下图的表格</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>我=<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Fri<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Sat<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Sun<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>摸鱼<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>划水<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>睡觉<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<table>
-    <tr>
-        <th rowspan="2">我=</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-    </tr>
-    <tr>
-        <td>摸鱼</td>
-        <td>划水</td>
-        <td>睡觉</td>
-    </tr>
-</table>
-
-<h5 id="3-4-表格"><a href="#3-4-表格" class="headerlink" title="3.4 表格"></a>3.4 表格</h5><p>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。<br>列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。<br>第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。<br><code>-</code> 左对齐， <code>:-:</code> 中心对齐，<code>-:</code> 右对齐<br>例如：</p>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">  装备名称      </span>|<span class="string">  属性  </span>|<span class="string">  售价  </span>|</span><br><span class="line">|<span class="string">  -----------  </span>|<span class="string">  ------- </span>|<span class="string">  ------- </span>|</span><br><span class="line">|<span class="string">  卓越的开天    </span>|<span class="string">  力量+2，敏捷+8    </span>|<span class="string">  ￥999  </span>|</span><br><span class="line">|<span class="string">  屠龙刀        </span>|<span class="string">  对群龙王伤害翻倍  </span>|<span class="string">  ￥99   </span>|</span><br><span class="line">|<span class="string">  记事本（      </span>|<span class="string">  作业++      </span>|<span class="string">  ￥1    </span>|</span><br></pre></td></tr></table></figure>
-<p>显示出来就是这样的：</p>
-<table>
-<thead>
-<tr>
-<th>装备名称</th>
-<th>属性</th>
-<th>售价</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>卓越的开天</td>
-<td>力量+2，敏捷+8</td>
-<td>￥999</td>
-</tr>
-<tr>
-<td>屠龙刀</td>
-<td>对群龙王伤害翻倍</td>
-<td>￥99</td>
-</tr>
-<tr>
-<td>记事本（</td>
-<td>作业++</td>
-<td>￥1</td>
-</tr>
-</tbody></table>
-<h5 id="3-5-Latex"><a href="#3-5-Latex" class="headerlink" title="3.5 Latex"></a>3.5 Latex</h5><p>这个就8用多说了，Latex的功能相当丰富，而markdown追求的是简洁，但我们仍然可以在markdown里使用Latex中使用<code>$ $</code>和<code>$$ $$</code>的功能。<br>附上一段上周问求作业的错误答案让大家看下效果:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$E(Y)&#x3D;E(\sum_&#123;i&#x3D;1&#125;^n E(Y_i))&#x3D;\sum_&#123;i&#x3D;1&#125;^n E(Y_i)&#x3D;\sum_&#123;i&#x3D;1&#125;^n \dfrac&#123;i\binom&#123;i-1&#125;&#123;k-1&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\sum_&#123;i&#x3D;1&#125;^n \dfrac&#123;\binom&#123;i&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;$$</span><br><span class="line"></span><br><span class="line">$$&#x3D;\dfrac&#123;0+\cdots 0 + \binom&#123;k&#125;&#123;k&#125;+\binom&#123;k+1&#125;&#123;k&#125;+\cdots \binom&#123;n&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\dfrac&#123;\binom&#123;k+1&#125;&#123;k+1&#125;+\binom&#123;k+1&#125;&#123;k&#125;+\cdots \binom&#123;n&#125;&#123;k&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;$$</span><br><span class="line"></span><br><span class="line">$$&#x3D;\dfrac&#123;\binom&#123;n+1&#125;&#123;k+1&#125;&#125;&#123;\binom&#123;n&#125;&#123;k&#125;&#125;&#x3D;\dfrac&#123;(n+1)!\times (n-k)! \times k!&#125;&#123;(n-k)!\times(k+1)!\times n!&#125;&#x3D;\dfrac&#123;n+1&#125;&#123;k+1&#125;$$</span><br></pre></td></tr></table></figure>
-
-<p>$E(Y)=E(\sum_{i=1}^n E(Y_i))=\sum_{i=1}^n E(Y_i)=\sum_{i=1}^n \dfrac{i\binom{i-1}{k-1}}{\binom{n}{k}}=\sum_{i=1}^n \dfrac{\binom{i}{k}}{\binom{n}{k}}$</p>
-<p>$=\dfrac{0+\cdots 0 + \binom{k}{k}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}=\dfrac{\binom{k+1}{k+1}+\binom{k+1}{k}+\cdots \binom{n}{k}}{\binom{n}{k}}$</p>
-<p>$=\dfrac{\binom{n+1}{k+1}}{\binom{n}{k}}=\dfrac{(n+1)!\times (n-k)! \times k!}{(n-k)!\times(k+1)!\times n!}=\dfrac{n+1}{k+1}$</p>
-<h5 id="3-6-分隔线"><a href="#3-6-分隔线" class="headerlink" title="3.6 分隔线"></a>3.6 分隔线</h5><p>这几种写法都可以产生分隔线</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">* </span><span class="emphasis">* *</span></span><br><span class="line"><span class="emphasis">***</span></span><br><span class="line"><span class="strong">*****</span></span><br><span class="line"><span class="bullet">- </span>- -</span><br><span class="line">-----------</span><br></pre></td></tr></table></figure>
-
-<p>而效果都是一样的</p>
-<hr>
-<h5 id="3-7-特殊字"><a href="#3-7-特殊字" class="headerlink" title="3.7 特殊字"></a>3.7 特殊字</h5><p>部分从HTML中继承的特殊符号（转载自<a href="https://www.jianshu.com/p/72481849cd33" target="_blank" rel="noopener">子非鱼_YE</a>，有删改，侵删）</p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>说明</th>
-<th>HTML源码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&amp;</td>
-<td>AND符号</td>
-<td>&amp; amp;</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>小于</td>
-<td>&amp; lt;</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>大于</td>
-<td>&amp; gt;</td>
-</tr>
-<tr>
-<td></td>
-<td>空格</td>
-<td>&amp; nbsp;</td>
-</tr>
-<tr>
-<td>¿</td>
-<td>倒问号</td>
-<td>&amp; iquest;</td>
-</tr>
-<tr>
-<td>?</td>
-<td>问号</td>
-<td>&amp; quest;</td>
-</tr>
-<tr>
-<td>«</td>
-<td>左书名号</td>
-<td>&amp; laquo;</td>
-</tr>
-<tr>
-<td>»</td>
-<td>右书名号</td>
-<td>&amp; raquo;</td>
-</tr>
-<tr>
-<td>“</td>
-<td>引号</td>
-<td>&amp; quot;    quote</td>
-</tr>
-<tr>
-<td>‘</td>
-<td>左单引号</td>
-<td>&amp; lsquo;</td>
-</tr>
-<tr>
-<td>’</td>
-<td>右单引号</td>
-<td>&amp; rsquo:</td>
-</tr>
-<tr>
-<td>“</td>
-<td>左双引号</td>
-<td>&amp; ldquo:</td>
-</tr>
-<tr>
-<td>”</td>
-<td>右双引号</td>
-<td>&amp; rdquo:</td>
-</tr>
-<tr>
-<td>¶</td>
-<td>段落符号</td>
-<td>&amp; para;</td>
-</tr>
-<tr>
-<td>§</td>
-<td>章节符</td>
-<td>&amp; sect;</td>
-</tr>
-<tr>
-<td>×</td>
-<td>乘号</td>
-<td>&amp; times;</td>
-</tr>
-<tr>
-<td>÷</td>
-<td>除号</td>
-<td>&amp; divide;</td>
-</tr>
-<tr>
-<td>±</td>
-<td>加减号</td>
-<td>&amp; plusmn;</td>
-</tr>
-<tr>
-<td>ƒ</td>
-<td>function</td>
-<td>&amp; fnof;</td>
-</tr>
-<tr>
-<td>√</td>
-<td>根号</td>
-<td>&amp; radic;</td>
-</tr>
-<tr>
-<td>∞</td>
-<td>无穷大</td>
-<td>&amp; infin;</td>
-</tr>
-<tr>
-<td>°</td>
-<td>度</td>
-<td>&amp; deg;    d</td>
-</tr>
-<tr>
-<td>≠</td>
-<td>不等号</td>
-<td>&amp; ne;</td>
-</tr>
-<tr>
-<td>≡</td>
-<td>恒等于</td>
-<td>&amp; equiv;</td>
-</tr>
-<tr>
-<td>≤</td>
-<td>小于等于</td>
-<td>&amp; le;</td>
-</tr>
-<tr>
-<td>≥</td>
-<td>大于等于</td>
-<td>&amp; ge;</td>
-</tr>
-<tr>
-<td>⊥</td>
-<td>垂直符号</td>
-<td>&amp; perp;</td>
-</tr>
-<tr>
-<td>←</td>
-<td>左箭头</td>
-<td>&amp; larr;</td>
-</tr>
-<tr>
-<td>→</td>
-<td>右箭头</td>
-<td>&amp; rarr;</td>
-</tr>
-<tr>
-<td>↑</td>
-<td>上箭头</td>
-<td>&amp; uarr;</td>
-</tr>
-<tr>
-<td>↓</td>
-<td>下箭头</td>
-<td>&amp; darr;</td>
-</tr>
-<tr>
-<td>↔</td>
-<td>水平箭头</td>
-<td>&amp; harr;</td>
-</tr>
-<tr>
-<td>↕</td>
-<td>竖直箭头</td>
-<td>&amp; varr;</td>
-</tr>
-<tr>
-<td>⇐</td>
-<td>双线左箭头</td>
-<td>&amp; lArr;</td>
-</tr>
-<tr>
-<td>⇒</td>
-<td>双线右箭头</td>
-<td>&amp; rArr;</td>
-</tr>
-<tr>
-<td>⇑</td>
-<td>双线上箭头</td>
-<td>&amp; uArr;</td>
-</tr>
-<tr>
-<td>⇓</td>
-<td>双线上箭头</td>
-<td>&amp; dArr;</td>
-</tr>
-<tr>
-<td>⇔</td>
-<td>双线水平双箭头</td>
-<td>&amp; hArr;</td>
-</tr>
-<tr>
-<td>⇕</td>
-<td>双线竖直箭头</td>
-<td>&amp; vArr;</td>
-</tr>
-<tr>
-<td>♠</td>
-<td>黑桃</td>
-<td>&amp; spades;</td>
-</tr>
-<tr>
-<td>♥</td>
-<td>红桃</td>
-<td>&amp; hearts;</td>
-</tr>
-<tr>
-<td>♣</td>
-<td>梅花</td>
-<td>&amp; clubs;</td>
-</tr>
-<tr>
-<td>♦</td>
-<td>方块</td>
-<td>&amp; diams;</td>
-</tr>
-<tr>
-<td>©</td>
-<td>版权</td>
-<td>&amp; copy;</td>
-</tr>
-<tr>
-<td>®</td>
-<td>注册商标</td>
-<td>&amp; reg;</td>
-</tr>
-<tr>
-<td>™</td>
-<td>商标</td>
-<td>&amp; trade;</td>
-</tr>
-<tr>
-<td>¥</td>
-<td>人民币</td>
-<td>&amp; yen;</td>
-</tr>
-<tr>
-<td>€</td>
-<td>欧元</td>
-<td>&amp; euro;</td>
-</tr>
-<tr>
-<td>¢</td>
-<td>美分</td>
-<td>&amp; cent;</td>
-</tr>
-<tr>
-<td>£</td>
-<td>英磅</td>
-<td>&amp; pound;</td>
-</tr>
-<tr>
-<td>⊕</td>
-<td>异或</td>
-<td>&amp; oplus;</td>
-</tr>
-<tr>
-<td>½</td>
-<td>二分之一</td>
-<td>&amp; frac12;</td>
-</tr>
-<tr>
-<td>¼</td>
-<td>四分之一</td>
-<td>&amp; frac14;</td>
-</tr>
-<tr>
-<td>‰</td>
-<td>千分符号</td>
-<td>&amp; permil;</td>
-</tr>
-<tr>
-<td>θ</td>
-<td>theta</td>
-<td>&amp; theta;</td>
-</tr>
-<tr>
-<td>λ</td>
-<td>lambda</td>
-<td>&amp; lambda;</td>
-</tr>
-<tr>
-<td>σ</td>
-<td>sigma</td>
-<td>&amp; sigma;</td>
-</tr>
-<tr>
-<td>τ</td>
-<td>tau</td>
-<td>&amp; tau;</td>
-</tr>
-</tbody></table>
-<hr>
-<h4 id="常用的Markdown工具。"><a href="#常用的Markdown工具。" class="headerlink" title="常用的Markdown工具。"></a>常用的Markdown工具。</h4><h6 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h6><ul>
-<li><strong>Vscode</strong> 万能编辑器，都能装编译器变IDE，写Markdown不是小意思🐎，记得装插件，Vsc自带的侧边预览着实让我头大。</li>
-<li><strong>Typora</strong> 貌似是口碑最好的Markdown编辑器，极简主义+观感很好的实时预览（Vscode自带的侧边预览效果就像看夜间模式的电子书）。    </li>
-<li><strong>记事本</strong> 真正的企业级玩家的威能武器 <strong>（</strong> 记事本就是零号世界线（雾。  </li>
-</ul>
-<hr>
-<p>下面就出现我们刚才说的<strong>注脚</strong>，让我们回看一下：</p>
-<blockquote>
-<p><strong>注意</strong>：经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经Markdown转换后，也会自动归类到文章的最后。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blog小记</title>
-    <url>/2020/04/21/Blog%E5%B0%8F%E8%AE%B0/</url>
-    <content><![CDATA[<p>呜呜呜，整了一天终于把自己的blog打理好了，</p>
-<ul>
-<li><input disabled="" type="checkbox"> <p>下午的微积分课还没听</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>上周的大物课还没听，大物作业也咕咕咕了，马上还要大物期中考试</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>明天还有问求课，不过害好是🐜🐜的课</p>
-</li>
-<li><input disabled="" type="checkbox"> <p>又是不会Oj的一周，随机算法杀我</p>
-</li>
-<li><input checked="" disabled="" type="checkbox"> <p>啥都不说了，早点睡吧(×)</p>
-</li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vscode环境配置</title>
-    <url>/2020/04/22/Vscode%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><i class="fa fa-battery-quarter" aria-hidden="true"></i> 呜呜呜我太困了明天（早上一定更新😭😭😭</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 明天还有大物课<i class="fa fa-bolt" aria-hidden="true"></i></li>
-</ul>
-<hr>
-<p>咕咕咕更新了🐦</p>
-<p><a href="http://www.mingw-w64.org/doku.php" target="_blank" rel="noopener">MinGw</a>和<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Vscode</a>的安装我就不细说的，百度一下就可以了（点击超链接有惊喜👋）</p>
-<h4 id="搭建C-运行环境时的两个设置文件如何配置："><a href="#搭建C-运行环境时的两个设置文件如何配置：" class="headerlink" title="搭建C++运行环境时的两个设置文件如何配置："></a>搭建C++运行环境时的两个设置文件如何配置：</h4><a id="more"></a>
-<hr>
-<p>(分隔线)</p>
-<ul>
-<li>launch.json的配置<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.2.0"</span>,</span><br><span class="line">    <span class="attr">"configurations"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"g++.exe - Start Debugging"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"cppdbg"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"program"</span>: <span class="string">"$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [],</span><br><span class="line">            <span class="attr">"stopAtEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"cwd"</span>: <span class="string">"$&#123;fileDirname&#125;"</span>,</span><br><span class="line">            <span class="attr">"environment"</span>: [],</span><br><span class="line">            <span class="attr">"externalConsole"</span>: <span class="literal">false</span>,<span class="comment">//为true开启控制台，为false关闭控制台</span></span><br><span class="line">            <span class="attr">"MIMode"</span>: <span class="string">"gdb"</span>,</span><br><span class="line">            <span class="attr">"miDebuggerPath"</span>: <span class="string">"C:\\MinGW\\bin\\gdb.exe"</span>,<span class="comment">//这里是你的MinGw的安装位置</span></span><br><span class="line">            <span class="attr">"setupCommands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"description"</span>: <span class="string">"为 gdb 启用整齐打印"</span>,</span><br><span class="line">                    <span class="attr">"text"</span>: <span class="string">"-enable-pretty-printing"</span>,</span><br><span class="line">                    <span class="attr">"ignoreFailures"</span>: <span class="literal">true</span></span><br><span class="line">                &#125;</span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"preLaunchTask"</span>: <span class="string">"g++.exe build active file"</span><span class="comment">//这是你的task任务的名称，和你tasks.json中的"lable"要相同</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>tasks.json的配置<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"2.0.0"</span>,</span><br><span class="line">    <span class="attr">"tasks"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"shell"</span>,</span><br><span class="line">            <span class="attr">"label"</span>: <span class="string">"g++.exe build active file"</span>,</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"C:\\MinGW\\bin\\g++.exe"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">                <span class="string">"-g"</span>,</span><br><span class="line">                <span class="string">"$&#123;file&#125;"</span>,</span><br><span class="line">                <span class="string">"-o"</span>,</span><br><span class="line">                <span class="string">"$&#123;fileDirname&#125;\\$&#123;fileBasenameNoExtension&#125;.exe"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"options"</span>: &#123;</span><br><span class="line">                <span class="attr">"cwd"</span>: <span class="string">"C:\\MinGW\\bin"</span><span class="comment">//这里是你的MinGw的安装位置</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"problemMatcher"</span>: &#123;</span><br><span class="line">                <span class="attr">"base"</span>: <span class="string">"$gcc"</span>,</span><br><span class="line">                <span class="attr">"fileLocation"</span>: <span class="string">"absolute"</span><span class="comment">//注意一下这句话</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"group"</span>: <span class="string">"build"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<code>&quot;fileLocation&quot;: &quot;absolute&quot;</code>上面这句话如果不加的话，就会出现这种情况:<blockquote>
-<p>下面两张图片是我在<a href="https://stackoverflow.com/questions/61291620/problem-in-vscode-gcc-problem-matcher-to-recognize-file-path-in-c-compiler" target="_blank" rel="noopener">Stackoverflow</a>上提问的附件图片，加载不出来概不负责（雾</p>
-</blockquote>
-</li>
-<li><img src="https://i.stack.imgur.com/jGqFY.png" alt="1"><br>编译报错正常</li>
-<li><img src="https://i.stack.imgur.com/IoOiM.png" alt="2"><br>但是你想直接点击那个错误跳转到错误行就会有这样的错误提示</li>
-</ul>
-<p>我改了好几次tasks.json和launch.json的配置都没有用，后来<a href="https://stackoverflow.com/questions/61291620/problem-in-vscode-gcc-problem-matcher-to-recognize-file-path-in-c-compiler" target="_blank" rel="noopener">Stackoverflow</a>上的dalao向我解释了一下</p>
-<blockquote>
-<p>The problem is the <code>&quot;$gcc&quot;</code> problem matcher defined in <code>ms-vscode.cpptools-0.XX.0</code> extension.<br>It is the same problem matcher as mentioned in the [Task documentation about problem matchers][1].<br>This matcher uses relative paths. But MinGW with g++ v8 uses absolute file paths in the error when the source file is supplied with absolute file path in the <code>args</code> property of the task.<br>Solution is to modify the <code>&quot;$gcc&quot;</code> problem matcher and use absolute file path.</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="string">"problemMatcher"</span>: &#123;</span><br><span class="line">  <span class="string">"base"</span>: <span class="string">"<span class="variable">$gcc</span>"</span>,</span><br><span class="line">  <span class="string">"fileLocation"</span>: <span class="string">"absolute"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<p>改成绝对路径就彳亍了，相对路径会导致路径重复。</p>
-]]></content>
-      <categories>
-        <category>Vscode</category>
-      </categories>
-      <tags>
-        <tag>Vscode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vscode+WSL部署</title>
-    <url>/2020/04/23/Vscode-WSL%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Vscode</category>
-      </categories>
-      <tags>
-        <tag>Vscode</tag>
-        <tag>WSL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Scheduler</title>
-    <url>/2020/04/26/Scheduler/</url>
-    <content><![CDATA[<p>讲真，没有de过这么长时间的代码</p>
-<p>前前后后将近重写了三次，因为一开始选择的写法貌似不是正解因而寸步难行</p>
-<p>星期四晚上好不容易写出了1ed，星期五de了一天到12点决定作废。</p>
-<p>然后一直写到4点多，写出了2ed，原以为会A的。</p>
-<p>结果折腾到下午4点，从WA97到WA73到WA38到WA28，还是没有出结果，一直卡在了WA28</p>
-<p>挂出这段让人心碎的随机调度代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Task</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> id,type,atime,btime;</span><br><span class="line">&#125; tasktmp;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> act,bct,ansat,ansbt,idA,idB;</span><br><span class="line">&#125; ti[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> n,t1=<span class="number">0</span>,t2=<span class="number">0</span>,t3=<span class="number">0</span>,num=<span class="number">0</span>,anstime=<span class="number">0x3f3f3f3f</span>,l1=<span class="number">0</span>,l2=<span class="number">0</span>,id[<span class="number">3</span>][<span class="number">100</span>]=&#123;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt; taskA,taskB,task1,task2,task3,part1,part2;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exchange</span><span class="params">(<span class="built_in">Task</span> x, <span class="built_in">Task</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">Task</span> tmp;</span><br><span class="line">    tmp = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = tmp;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ans</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> timeA = <span class="number">0</span>, timeB = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l1; i++)</span><br><span class="line">    	tasktmp=part1[i],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n;i++)</span><br><span class="line">		tasktmp=part2[i-l1],taskA.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;l2; i++)</span><br><span class="line">    	tasktmp=part2[i],taskB.push_back(tasktmp);</span><br><span class="line">    	</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n;i++)</span><br><span class="line">		tasktmp=part1[i-l2],taskB.push_back(tasktmp);</span><br><span class="line">    <span class="comment">//////////////////initial</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l1; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i].act=timeA; </span><br><span class="line">		timeA+=taskA[i].atime; </span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = l1; i&lt;n; i++)</span><br><span class="line">    &#123;	</span><br><span class="line">		ti[i-l1].bct=timeB;</span><br><span class="line">		timeB+=taskB[i-l1].btime;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///A processor judge</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l1; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeA&gt;=ti[i-l1].bct+taskA[i-l1].btime )</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeA=ti[i-l1].bct+taskA[i-l1].btime;</span><br><span class="line">			ti[i].act=timeA;</span><br><span class="line">			timeA+=taskA[i].atime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">///B processor judge</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l2; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(timeB&gt;=ti[i-l2].act+taskA[i-l2].atime)</span><br><span class="line">		&#123;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			timeB=ti[i-l2].act+taskA[i-l2].atime;</span><br><span class="line">			ti[i].bct=timeB;</span><br><span class="line">			timeB+=taskB[i].btime;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">max</span>(timeA,timeB)&lt;anstime)</span><br><span class="line">    &#123;</span><br><span class="line">        anstime=<span class="built_in">max</span>(timeA,timeB);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	ti[i].ansat=ti[i].act;</span><br><span class="line">        	ti[i].ansbt=ti[i].bct;</span><br><span class="line">        	ti[i].idA=taskA[i].id;</span><br><span class="line">        	ti[i].idB=taskB[i].id;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    taskA.<span class="built_in">clear</span>();</span><br><span class="line">    taskB.<span class="built_in">clear</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (pos &gt; num<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        l1=task1.<span class="built_in">size</span>();l2=task2.<span class="built_in">size</span>();</span><br><span class="line">        </span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l1;i++)</span><br><span class="line">			tasktmp=task1[i],part1.push_back(tasktmp);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;l2;i++)</span><br><span class="line">			tasktmp=task2[i],part2.push_back(tasktmp);</span><br><span class="line">	</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">        	<span class="keyword">if</span>(l1&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> a1=rand()%l1,a2=rand()%l1;</span><br><span class="line">				exchange(part1[a1], part1[a2]);</span><br><span class="line">			&#125;</span><br><span class="line">    		<span class="keyword">if</span>(l2&gt;<span class="number">0</span>) </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> b1=rand()%l2,b2=rand()%l2;</span><br><span class="line">				exchange(part2[b1], part2[b2]);</span><br><span class="line">			&#125;</span><br><span class="line">            ans();   </span><br><span class="line">        &#125;</span><br><span class="line">        part1.<span class="built_in">clear</span>();</span><br><span class="line">        part2.<span class="built_in">clear</span>();</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> 		<span class="built_in">Task</span> tt=task3[pos];</span><br><span class="line"> 		</span><br><span class="line"> 		tt.type=<span class="number">1</span>;task1.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);</span><br><span class="line">	    <span class="built_in">vector</span>&lt;<span class="built_in">Task</span>&gt;::iterator it=task1.<span class="built_in">end</span>();it--;task1.erase(it);</span><br><span class="line">	    </span><br><span class="line">	    tt.type=<span class="number">2</span>;task2.push_back(tt);</span><br><span class="line">	    solve(pos + <span class="number">1</span>);it=task2.<span class="built_in">end</span>();it--;task2.erase(it);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    srand(<span class="keyword">unsigned</span>(<span class="number">114514</span>));  </span><br><span class="line">    srand(<span class="keyword">unsigned</span>(time(<span class="literal">nullptr</span>)));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;t1,&amp;t2,&amp;t3);</span><br><span class="line">        tasktmp.id = i;</span><br><span class="line">        tasktmp.type = t1;</span><br><span class="line">        tasktmp.atime = t2;</span><br><span class="line">        tasktmp.btime = t3;</span><br><span class="line">        <span class="keyword">switch</span>(t1)</span><br><span class="line">		&#123;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">1</span>: task1.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">2</span>: task2.push_back(tasktmp);<span class="keyword">break</span>;</span><br><span class="line">	        <span class="keyword">case</span> <span class="number">3</span>: task3.push_back(tasktmp);num++;<span class="keyword">break</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    num=task3.<span class="built_in">size</span>();</span><br><span class="line">    solve(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, anstime);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"A %d %d\n"</span>, ti[i].ansat, ti[i].idA);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"B %d %d\n"</span>, ti[i].ansbt, ti[i].idB);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>心态♥真的炸了，👴♥累，再也不想写OJ了，这日子比高三还要苦</p>
-]]></content>
-      <categories>
-        <category>oj</category>
-      </categories>
-      <tags>
-        <tag>oj</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>快速乘总结</title>
-    <url>/2020/07/12/%E5%BF%AB%E9%80%9F%E4%B9%98%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>因为我们知道乘法有的时候会溢出，即使是 long long 也可能在乘法时因为结果过大溢出（当模数也是 long long ）。所以我们需要寻找一种能高效完成乘法操作并且不会爆 long long 的算法，也就是快速乘。本文也将对几种常用快速乘及其优化技巧做个总结。<br><br /></p>
-<hr>
-<h4 id="1-复杂度为-O-log-的快速乘："><a href="#1-复杂度为-O-log-的快速乘：" class="headerlink" title="1. 复杂度为 O(log) 的快速乘："></a>1. 复杂度为 O(log) 的快速乘：</h4><p>我们知道乘法其实就是把很多个加法运算合到一起。现在我们的乘法会爆范围，那我们就把它转化为加法。但是我们不可能一个一个的加，这样复杂度会是$O(n)$ 级别。所以我们模仿2进制加法操作来完成。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll p)</span><span class="comment">//计算x乘y的积</span></span></span><br><span class="line"><span class="function"></span>&#123;               </span><br><span class="line">    ll res = <span class="number">0</span>; <span class="comment">//加法初始化</span></span><br><span class="line">    <span class="keyword">while</span> (y)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (y &amp; <span class="number">1</span>)</span><br><span class="line">            res = (res + x) % p; <span class="comment">//模仿二进制</span></span><br><span class="line">        x = (x &lt;&lt; <span class="number">1</span>) % p;</span><br><span class="line">        y &gt;&gt;= <span class="number">1</span>; <span class="comment">//将x不断乘2达到二进制</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ll 表示 long long</span></span><br></pre></td></tr></table></figure>
-<p>当然我们不一定要仿照2进制，也可以是其他进制，<strong>只要中间算每一位上数字代表值时不会爆 longlong 就行！</strong></p>
-<h4 id="2-优秀的-STL-结构：-int128"><a href="#2-优秀的-STL-结构：-int128" class="headerlink" title="2. 优秀的 STL 结构：__int128"></a>2. 优秀的 STL 结构：__int128</h4><p>__int128是c++自带的一个数据类型，顾名思义，它可以装下 $2^{128}$ 级别的大数据，而且可以直接进行各种加减乘除之类的操作（复杂度很接近$ O(1) $），不过它需要手写输出（但其实我们只需要在运算时用一下就可以了，就像下面这样：）</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans=((__int128)x*y)%p</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-非常优秀的-O-1-快速乘"><a href="#3-非常优秀的-O-1-快速乘" class="headerlink" title="3. 非常优秀的 $O(1)$ 快速乘"></a>3. 非常优秀的 $O(1)$ 快速乘</h4><p>这个东西最初我感觉很不靠谱，但它就是能算出来正确答案。它就是用 long double 来进行优化取模运算。让我们先看一代码实现吧：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll z = (ld)x / p * y;</span><br><span class="line">    ll res = (ull)x * y - (ull)z * p;</span><br><span class="line">    <span class="keyword">return</span> (res + p) % p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ll 表示 long long</span></span><br><span class="line"><span class="comment">// ld 表示 long double</span></span><br><span class="line"><span class="comment">// ull 表示 unsigned long long</span></span><br><span class="line"><span class="comment">// 一种自动溢出的数据类型（存满了就会自动变为0）</span></span><br></pre></td></tr></table></figure>
-<p>看到这份代码有没有感到十分奇怪？ 它中间是直接用了乘法操作的啊！这不直接爆掉了吗？</p>
-<p>但是它就是可以算出正确答案来。因为它其实很巧妙的运用了自动溢出这个操作，我们的代码中的z就表示$ ⌊x×y/p⌋ $，所以我们要求的就变成了 $x×y−⌊x×y/p⌋×p $，虽然这两个部分都是会溢出的，但（unsigned）保证了它们溢出后的差值基本不变，所以即使它会溢出也不会影响最终结果的！</p>
-<h4 id="4-关于快速乘的灵活转化"><a href="#4-关于快速乘的灵活转化" class="headerlink" title="4.关于快速乘的灵活转化"></a>4.关于快速乘的灵活转化</h4><p>我们知道快速乘的原理其实就是乘法转加法（上面这种不算），但是这是可以根据题目性质灵活转变的，我们如何转成加法决定了我们的复杂度，就像如果模数并没有超过int范围很多，那我们适当的运用乘法分配律可以让复杂度非常接近 $O(1)$ ：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">ksc</span><span class="params">(ll x, ll y, ll P)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll L = x * (y &gt;&gt; <span class="number">25</span>) % P * (<span class="number">1</span> &lt;&lt; <span class="number">25</span>) % P;</span><br><span class="line">    ll R = x * (y &amp; ((<span class="number">1</span> &lt;&lt; <span class="number">25</span>) - <span class="number">1</span>)) % P;</span><br><span class="line">    <span class="keyword">return</span> (L + R) % P;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在保证运算不会爆long long的前提下，我们可以尽量优化其复杂度，就像上述代码在模数小于$10^{12}$ 的情况下完全变成了$O(1)$级别，在某些题目中会十分优秀！</p>
-<h4 id="5-一些经常需要快速乘的算法："><a href="#5-一些经常需要快速乘的算法：" class="headerlink" title="5. 一些经常需要快速乘的算法："></a>5. 一些经常需要快速乘的算法：</h4><h4 id="-millerrabin--判大质数"><a href="https://www.cnblogs.com/812-xiao-wen/p/10543928.html" target="_blank" rel="noopener"> <font size="3" color="red"> $ Miller~rabin $ 判大质数</a></h4>
-<h4 id="-pollardrho--大数因子寻找"><a href="https://www.cnblogs.com/812-xiao-wen/p/10544546.html" target="_blank" rel="noopener"> <font size="3" color="red"> $ Pollard~Rho $ 大数因子寻找</a></h4>
-<h4 id="-bsgs--大步小步算法"><a href="https://www.cnblogs.com/812-xiao-wen/p/10560908.html" target="_blank" rel="noopener"> <font size="3"  color="red"> $ BSGS $ 大步小步算法 </a></h4>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html颜色代码大全</title>
-    <url>/2020/07/13/html%E9%A2%9C%E8%89%B2%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/</url>
-    <content><![CDATA[<p>以下是DIVCSS5整理常用的HTML颜色表</p>
-<a id="more"></a>
-<div align="center">
-<table cellspacing="0" width="800" border="1">
-    <tbody>
-        <tr>
-            <td width="60" bgcolor="#000000">&nbsp;</td>
-            <td width="50">#000000</td>
-            <td width="60" bgcolor="#2f0000">&nbsp;</td>
-            <td width="50">#2F0000</td>
-            <td width="60" bgcolor="#600030">&nbsp;</td>
-            <td width="50">#600030</td>
-            <td width="60" bgcolor="#460046">&nbsp;</td>
-            <td width="50">#460046</td>
-            <td width="60" bgcolor="#28004d">&nbsp;</td>
-            <td width="50">#28004D</td>
-        </tr>
-        <tr>
-            <td bgcolor="#272727">&nbsp;</td>
-            <td>#272727</td>
-            <td bgcolor="#4d0000">&nbsp;</td>
-            <td>#4D0000</td>
-            <td bgcolor="#820041">&nbsp;</td>
-            <td>#820041</td>
-            <td bgcolor="#5e005e">&nbsp;</td>
-            <td>#5E005E</td>
-            <td bgcolor="#3a006f">&nbsp;</td>
-            <td>#3A006F</td>
-        </tr>
-        <tr>
-            <td bgcolor="#3c3c3c">&nbsp;</td>
-            <td>#3C3C3C</td>
-            <td bgcolor="#600000">&nbsp;</td>
-            <td>#600000</td>
-            <td bgcolor="#9f0050">&nbsp;</td>
-            <td>#9F0050</td>
-            <td bgcolor="#750075">&nbsp;</td>
-            <td>#750075</td>
-            <td bgcolor="#4b0091">&nbsp;</td>
-            <td>#4B0091</td>
-        </tr>
-        <tr>
-            <td bgcolor="#4f4f4f">&nbsp;</td>
-            <td>#4F4F4F</td>
-            <td bgcolor="#750000">&nbsp;</td>
-            <td>#750000</td>
-            <td bgcolor="#bf0060">&nbsp;</td>
-            <td>#BF0060</td>
-            <td bgcolor="#930093">&nbsp;</td>
-            <td>#930093</td>
-            <td bgcolor="#5b00ae">&nbsp;</td>
-            <td>#5B00AE</td>
-        </tr>
-        <tr>
-            <td bgcolor="#5b5b5b">&nbsp;</td>
-            <td>#5B5B5B</td>
-            <td bgcolor="#930000">&nbsp;</td>
-            <td>#930000</td>
-            <td bgcolor="#d9006c">&nbsp;</td>
-            <td>#D9006C</td>
-            <td bgcolor="#ae00ae">&nbsp;</td>
-            <td>#AE00AE</td>
-            <td bgcolor="#6f00d2">&nbsp;</td>
-            <td>#6F00D2</td>
-        </tr>
-        <tr>
-            <td bgcolor="#6c6c6c">&nbsp;</td>
-            <td>#6C6C6C</td>
-            <td bgcolor="#ae0000">&nbsp;</td>
-            <td>#AE0000</td>
-            <td bgcolor="#f00078">&nbsp;</td>
-            <td>#F00078</td>
-            <td bgcolor="#d200d2">&nbsp;</td>
-            <td>#D200D2</td>
-            <td bgcolor="#8600ff">&nbsp;</td>
-            <td>#8600FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#7b7b7b">&nbsp;</td>
-            <td>#7B7B7B</td>
-            <td bgcolor="#ce0000">&nbsp;</td>
-            <td>#CE0000</td>
-            <td bgcolor="#ff0080">&nbsp;</td>
-            <td>#FF0080</td>
-            <td bgcolor="#e800e8">&nbsp;</td>
-            <td>#E800E8</td>
-            <td bgcolor="#921aff">&nbsp;</td>
-            <td>#921AFF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#8e8e8e">&nbsp;</td>
-            <td>#8E8E8E</td>
-            <td bgcolor="#ea0000">&nbsp;</td>
-            <td>#EA0000</td>
-            <td bgcolor="#ff359a">&nbsp;</td>
-            <td>#FF359A</td>
-            <td bgcolor="#ff00ff">&nbsp;</td>
-            <td>#FF00FF</td>
-            <td bgcolor="#9f35ff">&nbsp;</td>
-            <td>#9F35FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#9d9d9d">&nbsp;</td>
-            <td>#9D9D9D</td>
-            <td bgcolor="#ff0000">&nbsp;</td>
-            <td>#FF0000</td>
-            <td bgcolor="#ff60af">&nbsp;</td>
-            <td>#FF60AF</td>
-            <td bgcolor="#ff44ff">&nbsp;</td>
-            <td>#FF44FF</td>
-            <td bgcolor="#b15bff">&nbsp;</td>
-            <td>#B15BFF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#adadad">&nbsp;</td>
-            <td>#ADADAD</td>
-            <td bgcolor="#ff2d2d">&nbsp;</td>
-            <td>#FF2D2D</td>
-            <td bgcolor="#ff79bc">&nbsp;</td>
-            <td>#FF79BC</td>
-            <td bgcolor="#ff77ff">&nbsp;</td>
-            <td>#FF77FF</td>
-            <td bgcolor="#be77ff">&nbsp;</td>
-            <td>#BE77FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#bebebe">&nbsp;</td>
-            <td>#BEBEBE</td>
-            <td bgcolor="#ff5151">&nbsp;</td>
-            <td>#FF5151</td>
-            <td bgcolor="#ff95ca">&nbsp;</td>
-            <td>#FF95CA</td>
-            <td bgcolor="#ff8eff">&nbsp;</td>
-            <td>#FF8EFF</td>
-            <td bgcolor="#ca8eff">&nbsp;</td>
-            <td>#CA8EFF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#d0d0d0">&nbsp;</td>
-            <td>#d0d0d0</td>
-            <td bgcolor="#ff7575">&nbsp;</td>
-            <td>#ff7575</td>
-            <td bgcolor="#ffaad5">&nbsp;</td>
-            <td>#ffaad5</td>
-            <td bgcolor="#ffa6ff">&nbsp;</td>
-            <td>#ffa6ff</td>
-            <td bgcolor="#d3a4ff">&nbsp;</td>
-            <td>#d3a4ff</td>
-        </tr>
-        <tr>
-            <td bgcolor="#e0e0e0">&nbsp;</td>
-            <td>#E0E0E0</td>
-            <td bgcolor="#ff9797">&nbsp;</td>
-            <td>#FF9797</td>
-            <td bgcolor="#ffc1e0">&nbsp;</td>
-            <td>#FFC1E0</td>
-            <td bgcolor="#ffbfff">&nbsp;</td>
-            <td>#FFBFFF</td>
-            <td bgcolor="#dcb5ff">&nbsp;</td>
-            <td>#DCB5FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#f0f0f0">&nbsp;</td>
-            <td>#F0F0F0</td>
-            <td bgcolor="#ffb5b5">&nbsp;</td>
-            <td>#FFB5B5</td>
-            <td bgcolor="#ffd9ec">&nbsp;</td>
-            <td>#FFD9EC</td>
-            <td bgcolor="#ffd0ff">&nbsp;</td>
-            <td>#FFD0FF</td>
-            <td bgcolor="#e6caff">&nbsp;</td>
-            <td>#E6CAFF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#fcfcfc">&nbsp;</td>
-            <td>#FCFCFC</td>
-            <td bgcolor="#ffd2d2">&nbsp;</td>
-            <td>#FFD2D2</td>
-            <td bgcolor="#ffecf5">&nbsp;</td>
-            <td>#FFECF5</td>
-            <td bgcolor="#ffe6ff">&nbsp;</td>
-            <td>#FFE6FF</td>
-            <td bgcolor="#f1e1ff">&nbsp;</td>
-            <td>#F1E1FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ffffff">&nbsp;</td>
-            <td>#FFFFFF</td>
-            <td bgcolor="#ffecec">&nbsp;</td>
-            <td>#FFECEC</td>
-            <td bgcolor="#fff7fb">&nbsp;</td>
-            <td>#FFF7FB</td>
-            <td bgcolor="#fff7ff">&nbsp;</td>
-            <td>#FFF7FF</td>
-            <td bgcolor="#faf4ff">&nbsp;</td>
-            <td>#FAF4FF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#000079">&nbsp;</td>
-            <td>#000079</td>
-            <td bgcolor="#000079">&nbsp;</td>
-            <td>#000079</td>
-            <td bgcolor="#003e3e">&nbsp;</td>
-            <td>#003E3E</td>
-            <td bgcolor="#006030">&nbsp;</td>
-            <td>#006030</td>
-            <td bgcolor="#006000">&nbsp;</td>
-            <td>#006000</td>
-        </tr>
-        <tr>
-            <td bgcolor="#000093">&nbsp;</td>
-            <td>#000093</td>
-            <td bgcolor="#003d79">&nbsp;</td>
-            <td>#003D79</td>
-            <td bgcolor="#005757">&nbsp;</td>
-            <td>#005757</td>
-            <td bgcolor="#01814a">&nbsp;</td>
-            <td>#01814A</td>
-            <td bgcolor="#007500">&nbsp;</td>
-            <td>#007500</td>
-        </tr>
-        <tr>
-            <td bgcolor="#0000c6">&nbsp;</td>
-            <td>#0000C6</td>
-            <td bgcolor="#004b97">&nbsp;</td>
-            <td>#004B97</td>
-            <td bgcolor="#007979">&nbsp;</td>
-            <td>#007979</td>
-            <td bgcolor="#019858">&nbsp;</td>
-            <td>#019858</td>
-            <td bgcolor="#009100">&nbsp;</td>
-            <td>#009100</td>
-        </tr>
-        <tr>
-            <td bgcolor="#0000c6">&nbsp;</td>
-            <td>#0000C6</td>
-            <td bgcolor="#005ab5">&nbsp;</td>
-            <td>#005AB5</td>
-            <td bgcolor="#009393">&nbsp;</td>
-            <td>#009393</td>
-            <td bgcolor="#01b468">&nbsp;</td>
-            <td>#01B468</td>
-            <td bgcolor="#00a600">&nbsp;</td>
-            <td>#00A600</td>
-        </tr>
-        <tr>
-            <td bgcolor="#0000e3">&nbsp;</td>
-            <td>#0000E3</td>
-            <td bgcolor="#0066cc">&nbsp;</td>
-            <td>#0066CC</td>
-            <td bgcolor="#00aeae">&nbsp;</td>
-            <td>#00AEAE</td>
-            <td bgcolor="#02c874">&nbsp;</td>
-            <td>#02C874</td>
-            <td bgcolor="#00bb00">&nbsp;</td>
-            <td>#00BB00</td>
-        </tr>
-        <tr>
-            <td bgcolor="#2828ff">&nbsp;</td>
-            <td>#2828FF</td>
-            <td bgcolor="#0072e3">&nbsp;</td>
-            <td>#0072E3</td>
-            <td bgcolor="#00caca">&nbsp;</td>
-            <td>#00CACA</td>
-            <td bgcolor="#02df82">&nbsp;</td>
-            <td>#02DF82</td>
-            <td bgcolor="#00db00">&nbsp;</td>
-            <td>#00DB00</td>
-        </tr>
-        <tr>
-            <td bgcolor="#4a4aff">&nbsp;</td>
-            <td>#4A4AFF</td>
-            <td bgcolor="#0080ff">&nbsp;</td>
-            <td>#0080FF</td>
-            <td bgcolor="#00e3e3">&nbsp;</td>
-            <td>#00E3E3</td>
-            <td bgcolor="#02f78e">&nbsp;</td>
-            <td>#02F78E</td>
-            <td bgcolor="#00ec00">&nbsp;</td>
-            <td>#00EC00</td>
-        </tr>
-        <tr>
-            <td bgcolor="#6a6aff">&nbsp;</td>
-            <td>#6A6AFF</td>
-            <td bgcolor="#2894ff">&nbsp;</td>
-            <td>#2894FF</td>
-            <td bgcolor="#00ffff">&nbsp;</td>
-            <td>#00FFFF</td>
-            <td bgcolor="#1afd9c">&nbsp;</td>
-            <td>#1AFD9C</td>
-            <td bgcolor="#28ff28">&nbsp;</td>
-            <td>#28FF28</td>
-        </tr>
-        <tr>
-            <td bgcolor="#7d7dff">&nbsp;</td>
-            <td>#7D7DFF</td>
-            <td bgcolor="#46a3ff">&nbsp;</td>
-            <td>#46A3FF</td>
-            <td bgcolor="#4dffff">&nbsp;</td>
-            <td>#4DFFFF</td>
-            <td bgcolor="#4efeb3">&nbsp;</td>
-            <td>#4EFEB3</td>
-            <td bgcolor="#53ff53">&nbsp;</td>
-            <td>#53FF53</td>
-        </tr>
-        <tr>
-            <td bgcolor="#9393ff">&nbsp;</td>
-            <td>#9393FF</td>
-            <td bgcolor="#66b3ff">&nbsp;</td>
-            <td>#66B3FF</td>
-            <td bgcolor="#80ffff">&nbsp;</td>
-            <td>#80FFFF</td>
-            <td bgcolor="#7afec6">&nbsp;</td>
-            <td>#7AFEC6</td>
-            <td bgcolor="#79ff79">&nbsp;</td>
-            <td>#79FF79</td>
-        </tr>
-        <tr>
-            <td bgcolor="#aaaaff">&nbsp;</td>
-            <td>#AAAAFF</td>
-            <td bgcolor="#84c1ff">&nbsp;</td>
-            <td>#84C1FF</td>
-            <td bgcolor="#a6ffff">&nbsp;</td>
-            <td>#A6FFFF</td>
-            <td bgcolor="#96fed1">&nbsp;</td>
-            <td>#96FED1</td>
-            <td bgcolor="#93ff93">&nbsp;</td>
-            <td>#93FF93</td>
-        </tr>
-        <tr>
-            <td bgcolor="#b9b9ff">&nbsp;</td>
-            <td>#B9B9FF</td>
-            <td bgcolor="#97cbff">&nbsp;</td>
-            <td>#97CBFF</td>
-            <td bgcolor="#bbffff">&nbsp;</td>
-            <td>#BBFFFF</td>
-            <td bgcolor="#adfedc">&nbsp;</td>
-            <td>#ADFEDC</td>
-            <td bgcolor="#a6ffa6">&nbsp;</td>
-            <td>#A6FFA6</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ceceff">&nbsp;</td>
-            <td>#CECEFF</td>
-            <td bgcolor="#acd6ff">&nbsp;</td>
-            <td>#ACD6FF</td>
-            <td bgcolor="#caffff">&nbsp;</td>
-            <td>#CAFFFF</td>
-            <td bgcolor="#c1ffe4">&nbsp;</td>
-            <td>#C1FFE4</td>
-            <td bgcolor="#bbffbb">&nbsp;</td>
-            <td>#BBFFBB</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ddddff">&nbsp;</td>
-            <td>#DDDDFF</td>
-            <td bgcolor="#c4e1ff">&nbsp;</td>
-            <td>#C4E1FF</td>
-            <td bgcolor="#d9ffff">&nbsp;</td>
-            <td>#D9FFFF</td>
-            <td bgcolor="#d7ffee">&nbsp;</td>
-            <td>#D7FFEE</td>
-            <td bgcolor="#ceffce">&nbsp;</td>
-            <td>#CEFFCE</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ececff">&nbsp;</td>
-            <td>#ECECFF</td>
-            <td bgcolor="#d2e9ff">&nbsp;</td>
-            <td>#D2E9FF</td>
-            <td bgcolor="#ecffff">&nbsp;</td>
-            <td>#ECFFFF</td>
-            <td bgcolor="#e8fff5">&nbsp;</td>
-            <td>#E8FFF5</td>
-            <td bgcolor="#dfffdf">&nbsp;</td>
-            <td>#DFFFDF</td>
-        </tr>
-        <tr>
-            <td bgcolor="#fbfbff">&nbsp;</td>
-            <td>#FBFBFF</td>
-            <td bgcolor="#ecf5ff">&nbsp;</td>
-            <td>#ECF5FF</td>
-            <td bgcolor="#fdffff">&nbsp;</td>
-            <td>#FDFFFF</td>
-            <td bgcolor="#fbfffd">&nbsp;</td>
-            <td>#FBFFFD</td>
-            <td bgcolor="#f0fff0">&nbsp;</td>
-            <td>#F0FFF0</td>
-        </tr>
-        <tr>
-            <td bgcolor="#467500">&nbsp;</td>
-            <td>#467500</td>
-            <td bgcolor="#424200">&nbsp;</td>
-            <td>#424200</td>
-            <td bgcolor="#5b4b00">&nbsp;</td>
-            <td>#5B4B00</td>
-            <td bgcolor="#844200">&nbsp;</td>
-            <td>#844200</td>
-            <td bgcolor="#642100">&nbsp;</td>
-            <td>#642100</td>
-        </tr>
-        <tr>
-            <td bgcolor="#548c00">&nbsp;</td>
-            <td>#548C00</td>
-            <td bgcolor="#5b5b00">&nbsp;</td>
-            <td>#5B5B00</td>
-            <td bgcolor="#796400">&nbsp;</td>
-            <td>#796400</td>
-            <td bgcolor="#9f5000">&nbsp;</td>
-            <td>#9F5000</td>
-            <td bgcolor="#842b00">&nbsp;</td>
-            <td>#842B00</td>
-        </tr>
-        <tr>
-            <td bgcolor="#64a600">&nbsp;</td>
-            <td>#64A600</td>
-            <td bgcolor="#737300">&nbsp;</td>
-            <td>#737300</td>
-            <td bgcolor="#977c00">&nbsp;</td>
-            <td>#977C00</td>
-            <td bgcolor="#bb5e00">&nbsp;</td>
-            <td>#BB5E00</td>
-            <td bgcolor="#a23400">&nbsp;</td>
-            <td>#A23400</td>
-        </tr>
-        <tr>
-            <td bgcolor="#73bf00">&nbsp;</td>
-            <td>#73BF00</td>
-            <td bgcolor="#8c8c00">&nbsp;</td>
-            <td>#8C8C00</td>
-            <td bgcolor="#ae8f00">&nbsp;</td>
-            <td>#AE8F00</td>
-            <td bgcolor="#d26900">&nbsp;</td>
-            <td>#D26900</td>
-            <td bgcolor="#bb3d00">&nbsp;</td>
-            <td>#BB3D00</td>
-        </tr>
-        <tr>
-            <td bgcolor="#82d900">&nbsp;</td>
-            <td>#82D900</td>
-            <td bgcolor="#a6a600">&nbsp;</td>
-            <td>#A6A600</td>
-            <td bgcolor="#c6a300">&nbsp;</td>
-            <td>#C6A300</td>
-            <td bgcolor="#ea7500">&nbsp;</td>
-            <td>#EA7500</td>
-            <td bgcolor="#d94600">&nbsp;</td>
-            <td>#D94600</td>
-        </tr>
-        <tr>
-            <td bgcolor="#8cea00">&nbsp;</td>
-            <td>#8CEA00</td>
-            <td bgcolor="#c4c400">&nbsp;</td>
-            <td>#C4C400</td>
-            <td bgcolor="#d9b300">&nbsp;</td>
-            <td>#D9B300</td>
-            <td bgcolor="#ff8000">&nbsp;</td>
-            <td>#FF8000</td>
-            <td bgcolor="#f75000">&nbsp;</td>
-            <td>#F75000</td>
-        </tr>
-        <tr>
-            <td bgcolor="#9aff02">&nbsp;</td>
-            <td>#9AFF02</td>
-            <td bgcolor="#e1e100">&nbsp;</td>
-            <td>#E1E100</td>
-            <td bgcolor="#eac100">&nbsp;</td>
-            <td>#EAC100</td>
-            <td bgcolor="#ff9224">&nbsp;</td>
-            <td>#FF9224</td>
-            <td bgcolor="#ff5809">&nbsp;</td>
-            <td>#FF5809</td>
-        </tr>
-        <tr>
-            <td bgcolor="#a8ff24">&nbsp;</td>
-            <td>#A8FF24</td>
-            <td bgcolor="#f9f900">&nbsp;</td>
-            <td>#F9F900</td>
-            <td bgcolor="#ffd306">&nbsp;</td>
-            <td>#FFD306</td>
-            <td bgcolor="#ffa042">&nbsp;</td>
-            <td>#FFA042</td>
-            <td bgcolor="#ff8040">&nbsp;</td>
-            <td>#FF8040</td>
-        </tr>
-        <tr>
-            <td bgcolor="#b7ff4a">&nbsp;</td>
-            <td>#B7FF4A</td>
-            <td bgcolor="#ffff37">&nbsp;</td>
-            <td>#FFFF37</td>
-            <td bgcolor="#ffdc35">&nbsp;</td>
-            <td>#FFDC35</td>
-            <td bgcolor="#ffaf60">&nbsp;</td>
-            <td>#FFAF60</td>
-            <td bgcolor="#ff8f59">&nbsp;</td>
-            <td>#FF8F59</td>
-        </tr>
-        <tr>
-            <td bgcolor="#c2ff68">&nbsp;</td>
-            <td>#C2FF68</td>
-            <td bgcolor="#ffff6f">&nbsp;</td>
-            <td>#FFFF6F</td>
-            <td bgcolor="#ffe153">&nbsp;</td>
-            <td>#FFE153</td>
-            <td bgcolor="#ffbb77">&nbsp;</td>
-            <td>#FFBB77</td>
-            <td bgcolor="#ff9d6f">&nbsp;</td>
-            <td>#FF9D6F</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ccff80">&nbsp;</td>
-            <td>#CCFF80</td>
-            <td bgcolor="#ffff93">&nbsp;</td>
-            <td>#FFFF93</td>
-            <td bgcolor="#ffe66f">&nbsp;</td>
-            <td>#FFE66F</td>
-            <td bgcolor="#ffc78e">&nbsp;</td>
-            <td>#FFC78E</td>
-            <td bgcolor="#ffad86">&nbsp;</td>
-            <td>#FFAD86</td>
-        </tr>
-        <tr>
-            <td bgcolor="#d3ff93">&nbsp;</td>
-            <td>#D3FF93</td>
-            <td bgcolor="#ffffaa">&nbsp;</td>
-            <td>#FFFFAA</td>
-            <td bgcolor="#ffed97">&nbsp;</td>
-            <td>#FFED97</td>
-            <td bgcolor="#ffd1a4">&nbsp;</td>
-            <td>#FFD1A4</td>
-            <td bgcolor="#ffbd9d">&nbsp;</td>
-            <td>#FFBD9D</td>
-        </tr>
-        <tr>
-            <td bgcolor="#deffac">&nbsp;</td>
-            <td>#DEFFAC</td>
-            <td bgcolor="#ffffb9">&nbsp;</td>
-            <td>#FFFFB9</td>
-            <td bgcolor="#fff0ac">&nbsp;</td>
-            <td>#FFF0AC</td>
-            <td bgcolor="#ffdcb9">&nbsp;</td>
-            <td>#FFDCB9</td>
-            <td bgcolor="#ffcbb3">&nbsp;</td>
-            <td>#FFCBB3</td>
-        </tr>
-        <tr>
-            <td bgcolor="#e8ffc4">&nbsp;</td>
-            <td>#E8FFC4</td>
-            <td bgcolor="#ffffce">&nbsp;</td>
-            <td>#FFFFCE</td>
-            <td bgcolor="#fff4c1">&nbsp;</td>
-            <td>#FFF4C1</td>
-            <td bgcolor="#ffe4ca">&nbsp;</td>
-            <td>#FFE4CA</td>
-            <td bgcolor="#ffdac8">&nbsp;</td>
-            <td>#FFDAC8</td>
-        </tr>
-        <tr>
-            <td bgcolor="#efffd7">&nbsp;</td>
-            <td>#EFFFD7</td>
-            <td bgcolor="#ffffdf">&nbsp;</td>
-            <td>#FFFFDF</td>
-            <td bgcolor="#fff8d7">&nbsp;</td>
-            <td>#FFF8D7</td>
-            <td bgcolor="#ffeedd">&nbsp;</td>
-            <td>#FFEEDD</td>
-            <td bgcolor="#ffe6d9">&nbsp;</td>
-            <td>#FFE6D9</td>
-        </tr>
-        <tr>
-            <td bgcolor="#f5ffe8">&nbsp;</td>
-            <td>#F5FFE8</td>
-            <td bgcolor="#fffff4">&nbsp;</td>
-            <td>#FFFFF4</td>
-            <td bgcolor="#fffcec">&nbsp;</td>
-            <td>#FFFCEC</td>
-            <td bgcolor="#fffaf4">&nbsp;</td>
-            <td>#FFFAF4</td>
-            <td bgcolor="#fff3ee">&nbsp;</td>
-            <td>#FFF3EE</td>
-        </tr>
-        <tr>
-            <td bgcolor="#613030">&nbsp;</td>
-            <td>#613030</td>
-            <td bgcolor="#616130">&nbsp;</td>
-            <td>#616130</td>
-            <td bgcolor="#336666">&nbsp;</td>
-            <td>#336666</td>
-            <td bgcolor="#484891">&nbsp;</td>
-            <td>#484891</td>
-            <td bgcolor="#6c3365">&nbsp;</td>
-            <td>#6C3365</td>
-        </tr>
-        <tr>
-            <td bgcolor="#743a3a">&nbsp;</td>
-            <td>#743A3A</td>
-            <td bgcolor="#707038">&nbsp;</td>
-            <td>#707038</td>
-            <td bgcolor="#3d7878">&nbsp;</td>
-            <td>#3D7878</td>
-            <td bgcolor="#5151a2">&nbsp;</td>
-            <td>#5151A2</td>
-            <td bgcolor="#7e3d76">&nbsp;</td>
-            <td>#7E3D76</td>
-        </tr>
-        <tr>
-            <td bgcolor="#804040">&nbsp;</td>
-            <td>#804040</td>
-            <td bgcolor="#808040">&nbsp;</td>
-            <td>#808040</td>
-            <td bgcolor="#408080">&nbsp;</td>
-            <td>#408080</td>
-            <td bgcolor="#5a5aad">&nbsp;</td>
-            <td>#5A5AAD</td>
-            <td bgcolor="#8f4586">&nbsp;</td>
-            <td>#8F4586</td>
-        </tr>
-        <tr>
-            <td bgcolor="#984b4b">&nbsp;</td>
-            <td>#984B4B</td>
-            <td bgcolor="#949449">&nbsp;</td>
-            <td>#949449</td>
-            <td bgcolor="#4f9d9d">&nbsp;</td>
-            <td>#4F9D9D</td>
-            <td bgcolor="#7373b9">&nbsp;</td>
-            <td>#7373B9</td>
-            <td bgcolor="#9f4d95">&nbsp;</td>
-            <td>#9F4D95</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ad5a5a">&nbsp;</td>
-            <td>#AD5A5A</td>
-            <td bgcolor="#a5a552">&nbsp;</td>
-            <td>#A5A552</td>
-            <td bgcolor="#5cadad">&nbsp;</td>
-            <td>#5CADAD</td>
-            <td bgcolor="#8080c0">&nbsp;</td>
-            <td>#8080C0</td>
-            <td bgcolor="#ae57a4">&nbsp;</td>
-            <td>#AE57A4</td>
-        </tr>
-        <tr>
-            <td bgcolor="#b87070">&nbsp;</td>
-            <td>#B87070</td>
-            <td bgcolor="#afaf61">&nbsp;</td>
-            <td>#AFAF61</td>
-            <td bgcolor="#6fb7b7">&nbsp;</td>
-            <td>#6FB7B7</td>
-            <td bgcolor="#9999cc">&nbsp;</td>
-            <td>#9999CC</td>
-            <td bgcolor="#b766ad">&nbsp;</td>
-            <td>#B766AD</td>
-        </tr>
-        <tr>
-            <td bgcolor="#c48888">&nbsp;</td>
-            <td>#C48888</td>
-            <td bgcolor="#b9b973">&nbsp;</td>
-            <td>#B9B973</td>
-            <td bgcolor="#81c0c0">&nbsp;</td>
-            <td>#81C0C0</td>
-            <td bgcolor="#a6a6d2">&nbsp;</td>
-            <td>#A6A6D2</td>
-            <td bgcolor="#c07ab8">&nbsp;</td>
-            <td>#C07AB8</td>
-        </tr>
-        <tr>
-            <td bgcolor="#cf9e9e">&nbsp;</td>
-            <td>#CF9E9E</td>
-            <td bgcolor="#c2c287">&nbsp;</td>
-            <td>#C2C287</td>
-            <td bgcolor="#95caca">&nbsp;</td>
-            <td>#95CACA</td>
-            <td bgcolor="#b8b8dc">&nbsp;</td>
-            <td>#B8B8DC</td>
-            <td bgcolor="#ca8ec2">&nbsp;</td>
-            <td>#CA8EC2</td>
-        </tr>
-        <tr>
-            <td bgcolor="#d9b3b3">&nbsp;</td>
-            <td>#D9B3B3</td>
-            <td bgcolor="#cdcd9a">&nbsp;</td>
-            <td>#CDCD9A</td>
-            <td bgcolor="#a3d1d1">&nbsp;</td>
-            <td>#A3D1D1</td>
-            <td bgcolor="#c7c7e2">&nbsp;</td>
-            <td>#C7C7E2</td>
-            <td bgcolor="#d2a2cc">&nbsp;</td>
-            <td>#D2A2CC</td>
-        </tr>
-        <tr>
-            <td bgcolor="#e1c4c4">&nbsp;</td>
-            <td>#E1C4C4</td>
-            <td bgcolor="#d6d6ad">&nbsp;</td>
-            <td>#D6D6AD</td>
-            <td bgcolor="#b3d9d9">&nbsp;</td>
-            <td>#B3D9D9</td>
-            <td bgcolor="#d8d8eb">&nbsp;</td>
-            <td>#D8D8EB</td>
-            <td bgcolor="#dab1d5">&nbsp;</td>
-            <td>#DAB1D5</td>
-        </tr>
-        <tr>
-            <td bgcolor="#ebd6d6">&nbsp;</td>
-            <td>#EBD6D6</td>
-            <td bgcolor="#dedebe">&nbsp;</td>
-            <td>#DEDEBE</td>
-            <td bgcolor="#c4e1e1">&nbsp;</td>
-            <td>#C4E1E1</td>
-            <td bgcolor="#e6e6f2">&nbsp;</td>
-            <td>#E6E6F2</td>
-            <td bgcolor="#e2c2de">&nbsp;</td>
-            <td>#E2C2DE</td>
-        </tr>
-        <tr>
-            <td bgcolor="#f2e6e6">&nbsp;</td>
-            <td>#F2E6E6</td>
-            <td bgcolor="#e8e8d0">&nbsp;</td>
-            <td>#E8E8D0</td>
-            <td bgcolor="#d1e9e9">&nbsp;</td>
-            <td>#D1E9E9</td>
-            <td bgcolor="#f3f3fa">&nbsp;</td>
-            <td>#F3F3FA</td>
-            <td bgcolor="#ebd3e8">&nbsp;</td>
-            <td>#EBD3E8</td>
-        </tr>
-    </tbody>
-</table>
-</div>]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python I/O基本操作</title>
-    <url>/2020/07/14/Python%20IO%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h3 id="1-打印到屏幕"><a href="#1-打印到屏幕" class="headerlink" title="1.打印到屏幕"></a>1.打印到屏幕</h3><p>最简单的输出方法是用print语句，你可以给它传递零个或多个用逗号隔开的表达式。此函数把你传递的表达式转换成一个字符串表达式，并将结果写到标准输出如下：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"></span><br><span class="line">print(<span class="string">"abc123"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>你的标准屏幕上会产生以下结果：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">abc123</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-读取键盘输入"><a href="#2-读取键盘输入" class="headerlink" title="2.读取键盘输入"></a>2.读取键盘输入</h3><p>Python提供了两个内置函数从标准输入读入一行文本，默认的标准输入是键盘。如下：</p>
-<ul>
-<li><p>raw_input</p>
-</li>
-<li><p>input</p>
-</li>
-</ul>
-<h4 id="2-1-raw-input函数"><a href="#2-1-raw-input函数" class="headerlink" title="2.1 raw_input函数"></a>2.1 raw_input函数</h4><p>raw_input([prompt]) 函数从标准输入读取一个行，并返回一个字符串(<strong>去掉结尾的换行符</strong>)：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"> </span><br><span class="line">str = raw_input(<span class="string">"请输入："</span>)</span><br><span class="line">print(<span class="string">"你输入的内容是: "</span>, str)</span><br></pre></td></tr></table></figure>
-
-<p>这将提示你输入任意字符串，然后在屏幕上显示相同的字符串。当我输入”Hello Python！”，它的输出如下：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">请输入：Hello Python！</span><br><span class="line">你输入的内容是:  Hello Python！</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-input函数"><a href="#2-2-input函数" class="headerlink" title="2.2 input函数"></a>2.2 input函数</h4><p>input([prompt]函数和raw_input([prompt])函数基本类似,<strong>但是 input 可以接收一个Python表达式作为输入，并将运算结果返回</strong>。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*- </span></span><br><span class="line"> </span><br><span class="line">str = input(<span class="string">"请输入："</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"你输入的内容是: "</span>, str</span><br></pre></td></tr></table></figure>
-
-<p>这会产生如下的对应着输入的结果：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">请输入：[x*<span class="number">5</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>,<span class="number">10</span>,<span class="number">2</span>)]</span><br><span class="line">你输入的内容是:  [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-打开和关闭文件"><a href="#3-打开和关闭文件" class="headerlink" title="3. 打开和关闭文件"></a>3. 打开和关闭文件</h3><p>现在，您已经可以向标准输入和输出进行读写。现在，来看看怎么读写实际的数据文件。</p>
-<p>Python 提供了必要的函数和方法进行默认情况下的文件基本操作。你可以用 <strong>file</strong> 对象做大部分的文件操作。</p>
-<p><strong>注意：在window下用\表示路径，而在linux都是用/表示路径。</strong></p>
-<h4 id="3-1-文件路径"><a href="#3-1-文件路径" class="headerlink" title="3.1 文件路径"></a>3.1 文件路径</h4><h5 id="3-1-1-和"><a href="#3-1-1-和" class="headerlink" title="3.1.1 /和\"></a>3.1.1 /和\</h5><p>在window下用\表示路径（准确的说是正反都可(?)），而在linux都是用/表示路径</p>
-<h5 id="3-1-2-字符串前面加上’r’的作用"><a href="#3-1-2-字符串前面加上’r’的作用" class="headerlink" title="3.1.2 字符串前面加上’r’的作用"></a>3.1.2 字符串前面加上’r’的作用</h5><p>在打开文件的时候open(r’c:.…’)，加r和不加’’r是有区别的</p>
-<p>‘r’是防止字符转义的 如果路径中出现’\t’的话 不加r的话\t就会被转义 而加了’r’之后’\t’就能保留原有的样子</p>
-<p>在字符串赋值的时候 前面加’r’可以防止字符串在时候的时候不被转义 原理是在转义字符前加’&#39;</p>
-<p>例：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">s=<span class="string">r'\tt'</span></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
-<p>Output:</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="string">'\tt'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">s=<span class="string">'\tt'</span></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>
-<p>Output:</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="string">'t'</span></span><br></pre></td></tr></table></figure>
-
-<p>在Python的string前面加上‘r’， 是为了告诉编译器这个string是个raw string，不要转意backslash ‘&#39; 。 例如，\n 在raw string中，是两个字符，\和n， 而不会转意为换行符。由于正则表达式和 \ 会有冲突，因此，当一个字符串使用了正则表达式后，最好在前面加上’r’。</p>
-<h4 id="3-1-open-函数"><a href="#3-1-open-函数" class="headerlink" title="3.1 open 函数"></a>3.1 open 函数</h4><p>你必须先用Python内置的open()函数打开一个文件，创建一个file对象，相关的方法才可以调用它进行读写。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">file object = open(file_name [, access_mode][, buffering])</span><br></pre></td></tr></table></figure>
-
-
-<p>各个参数的细节如下：</p>
-<ul>
-<li><p><strong>file_name</strong>：file_name变量是一个包含了你要访问的文件名称的字符串值。</p>
-</li>
-<li><p><strong>access_mode</strong>：access_mode决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。</p>
-</li>
-<li><p><strong>buffering</strong>: 如果buffering的值被设为0，就不会有寄存。如果buffering的值取1，访问文件时会寄存行。如果将buffering的值设为大于1的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。</p>
-</li>
-</ul>
-<p>不同模式打开文件的完全列表：</p>
-<table class="reference">
-<tbody><tr><th style="width:10%">模式</th><th>描述</th></tr>
-<tr><td>t</td><td>文本模式 (默认)。</td></tr>
-<tr><td>x</td><td>写模式，新建一个文件，如果该文件已存在则会报错。</td></tr>
-<tr><td>b</td><td>二进制模式。</td></tr>
-<tr><td>+</td><td>打开一个文件进行更新(可读可写)。</td></tr>
-<tr><td>U</td><td>通用换行模式(不推荐)。</td></tr>
-<tr><td>r</td><td>以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。</td></tr>
-<tr><td>rb</td><td>以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。这是默认模式。一般用于非文本文件如图片等。</td></tr>
-<tr><td>r+</td><td>打开一个文件用于读写。文件指针将会放在文件的开头。</td></tr>
-<tr><td>rb+</td><td>以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。一般用于非文本文件如图片等。</td></tr>
-<tr><td>w</td><td>打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td></tr>
-<tr><td>wb</td><td>以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。</td></tr>
-<tr><td>w+</td><td>打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。</td></tr> 
-<tr><td>wb+</td><td>以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。一般用于非文本文件如图片等。</td></tr>
-
-
-<tr><td>a</td><td>打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</td></tr> 
-<tr><td>ab</td><td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。</td></tr> 
-<tr><td>a+</td><td>打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。</td></tr> 
-<tr><td>ab+</td><td>以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。</td></tr>
-
-</tbody></table>
-下图很好的总结了这几种模式：
-
-<table class="reference">
-<thead>
-<tr>
-<th style="text-align:center">模式</th>
-<th style="text-align:center">r</th>
-<th style="text-align:center">r+</th>
-<th style="text-align:center">w</th>
-<th style="text-align:center">w+</th>
-<th style="text-align:center">a</th>
-<th style="text-align:center">a+</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">读</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-</tr>
-<tr>
-<td style="text-align:center">写</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-</tr>
-<tr>
-<td style="text-align:center">创建</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-</tr>
-<tr>
-<td style="text-align:center">覆盖</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">指针在开始</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">指针在结尾</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">+</td>
-<td style="text-align:center">+</td>
-</tr>
-</tbody>
-</table>
-
-<h4 id="3-2-File对象的属性"><a href="#3-2-File对象的属性" class="headerlink" title="3.2 File对象的属性"></a>3.2 File对象的属性</h4><p>一个文件被打开后，你有一个file对象，你可以得到有关该文件的各种信息。</p>
-<p>以下是和file对象相关的所有属性的列表：</p>
-<table class="reference">
-<tbody><tr><th>属性</th><th>描述</th></tr>
-<tr><td>file.closed</td><td>返回true如果文件已被关闭，否则返回false。</td></tr>
-<tr><td>file.mode</td><td>返回被打开文件的访问模式。</td></tr>
-<tr><td>file.name</td><td>返回文件的名称。</td></tr>
-<tr><td>file.softspace</td><td>如果用print输出后，必须跟一个空格符，则返回false。否则返回true。</td></tr>
-</tbody></table>
-
-<p>如下实例：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"文件名: "</span>, fo.name</span><br><span class="line"><span class="keyword">print</span> <span class="string">"是否已关闭 : "</span>, fo.closed</span><br><span class="line"><span class="keyword">print</span> <span class="string">"访问模式 : "</span>, fo.mode</span><br><span class="line"><span class="keyword">print</span> <span class="string">"末尾是否强制加空格 : "</span>, fo.softspace</span><br></pre></td></tr></table></figure>
-
-<p>以上实例输出结果：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">文件名:  foo.txt</span><br><span class="line">是否已关闭 :  <span class="literal">False</span></span><br><span class="line">访问模式 :  w</span><br><span class="line">末尾是否强制加空格 :  <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-
-<h4 id="3-2-读写文件"><a href="#3-2-读写文件" class="headerlink" title="3.2 读写文件"></a>3.2 读写文件</h4><h5 id="3-2-1-close-方法"><a href="#3-2-1-close-方法" class="headerlink" title="3.2.1 close()方法"></a>3.2.1 close()方法</h5><p>File对象的 close()方法刷新缓冲区里任何还没写入的信息，并关闭该文件，这之后便不能再进行写入。当一个文件对象的引用被重新指定给另一个文件时，Python 会关闭之前的文件。用 close()方法关闭文件是一个很好的习惯。</p>
-<p>语法：</p>
-<p>fileObject.close()</p>
-<p>例子：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">print(<span class="string">"文件名: "</span>, fo.name)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
-
-<p>以上实例输出结果：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">文件名:  foo.txt</span><br></pre></td></tr></table></figure>
-
-
-<p>file对象提供了一系列方法，能让我们的文件访问更轻松。来看看如何使用read()和write()方法来读取和写入文件。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#可以使用with语句打开，不需要关闭，可以同时打开多个文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'路径'</span>,mode = <span class="string">'打开模式'</span>, encoding=<span class="string">'编码'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3-2-2-write-方法"><a href="#3-2-2-write-方法" class="headerlink" title="3.2.2 write()方法"></a>3.2.2 write()方法</h5><p>write()方法可将任何字符串写入一个打开的文件。需要重点注意的是，Python字符串可以是二进制数据，而不是仅仅是文字。</p>
-<p>write()方法<strong>不会</strong>在字符串的结尾添加换行符(‘\n’)：</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">fileObject.write(string)</span><br></pre></td></tr></table></figure>
-
-
-<p>在这里，被传递的参数是要写入到已打开文件的内容。</p>
-<p>例子：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">fo.write( <span class="string">"www.runoob.com!\nVery good site!\n"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
-
-<p>上述方法会创建foo.txt文件，并将收到的内容写入该文件，并最终关闭文件。如果你打开这个文件，将看到以下内容:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cat foo.txt </span><br><span class="line">www.runoob.com!</span><br><span class="line">Very good site!</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-2-3-read-方法"><a href="#3-2-3-read-方法" class="headerlink" title="3.2.3 read()方法"></a>3.2.3 read()方法</h5><p>read()方法从一个打开的文件中读取一个字符串。需要重点注意的是，Python字符串可以是二进制数据，而不是仅仅是文字。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">fileObject.read([count])</span><br></pre></td></tr></table></figure>
-
-<p>在这里，被传递的参数是要从已打开文件中读取的字节计数。该方法从文件的开头开始读入，如果没有传入count，它会尝试尽可能多地读取更多的内容，很可能是直到文件的末尾。</p>
-<h3>
-例子：
-</h3>
-
-<p>这里我们用到以上创建的 foo.txt 文件。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"r+"</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"读取的字符串是 : "</span>, str</span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
-
-<p>以上实例输出结果：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">读取的字符串是 :  www.runoob</span><br></pre></td></tr></table></figure>
-
-<p>文件位置：</p>
-<p>不同read函数分类：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#read()</span></span><br><span class="line">content = f.read()        <span class="comment">#一次性全部读出来</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#readline()</span></span><br><span class="line">content = f.readline()        <span class="comment">#一行一行的读,和C++一样，执行一次读一行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#readlines()</span></span><br><span class="line">content = f.readlines()        <span class="comment">#全部读出来，每行存储成一个列表的元素</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#for循环 **建议使用**</span></span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> f:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="4-文件定位-文件指针"><a href="#4-文件定位-文件指针" class="headerlink" title="4. 文件定位(文件指针)"></a>4. 文件定位(文件指针)</h3><p>tell()方法告诉你文件内的当前位置, 换句话说，下一次的读写会发生在文件开头这么多字节之后。</p>
-<p><code>seek(offset [,from])</code>方法改变当前文件的位置。<code>offset</code>变量表示要移动的字节数。<code>from</code>变量指定开始移动字节的参考位置。</p>
-<ul>
-<li>如果<code>from</code>被设为0，这意味着将文件的开头作为移动字节的参考位置。</li>
-<li>如果设为1，则使用当前的位置作为参考位置。</li>
-<li>如果它被设为2，那么该文件的末尾将作为参考位置。</li>
-</ul>
-<p>例子：</p>
-<p>就用我们上面创建的文件foo.txt。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开一个文件</span></span><br><span class="line">fo = open(<span class="string">"foo.txt"</span>, <span class="string">"r+"</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"读取的字符串是 : "</span>, str</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查找当前位置</span></span><br><span class="line">position = fo.tell()</span><br><span class="line"><span class="keyword">print</span> <span class="string">"当前文件位置 : "</span>, position</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 把指针再次重新定位到文件开头</span></span><br><span class="line">position = fo.seek(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">str = fo.read(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">"重新读取字符串 : "</span>, str</span><br><span class="line"><span class="comment"># 关闭打开的文件</span></span><br><span class="line">fo.close()</span><br></pre></td></tr></table></figure>
-
-<p>以上实例输出结果：</p>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">读取的字符串是 :  <span class="type">www.runoob</span></span><br><span class="line">当前文件位置 :  10</span><br><span class="line">重新读取字符串 :  <span class="type">www.runoob</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-重命名和删除文件"><a href="#5-重命名和删除文件" class="headerlink" title="5. 重命名和删除文件"></a>5. 重命名和删除文件</h3><p>Python的os模块提供了帮你执行文件处理操作的方法，比如重命名和删除文件。</p>
-<p>要使用这个模块，你必须先导入它，然后才可以调用相关的各种功能。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br></pre></td></tr></table></figure>
+<!DOCTYPE html>
 
 
 
-<h4 id="5-1-rename-方法："><a href="#5-1-rename-方法：" class="headerlink" title="5.1 rename()方法："></a>5.1 rename()方法：</h4><p><code>rename()</code>方法需要两个参数，当前的文件名和新文件名。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.rename(current_file_name, new_file_name)</span><br></pre></td></tr></table></figure>
+  
 
 
-<p>例子：</p>
-<p>下例将重命名一个已经存在的文件test1.txt。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 重命名文件test1.txt为test2.txt。</span></span><br><span class="line">os.rename( <span class="string">"test1.txt"</span>, <span class="string">"test2.txt"</span> )</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-2-remove-方法"><a href="#5-2-remove-方法" class="headerlink" title="5.2 remove()方法"></a>5.2 remove()方法</h4><p>你可以用<code>remove()</code>方法删除文件，需要提供要删除的文件名作为参数。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.remove(file_name)</span><br></pre></td></tr></table></figure>
-
-<p>例子：</p>
-<p>下例将删除一个已经存在的文件test2.txt。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除一个已经存在的文件test2.txt</span></span><br><span class="line">os.remove(<span class="string">"test2.txt"</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-目录操作："><a href="#6-目录操作：" class="headerlink" title="6. 目录操作："></a>6. 目录操作：</h3><p>所有文件都包含在各个不同的目录下，不过Python也能轻松处理。os模块有许多方法能帮你创建，删除和更改目录。</p>
-<h4 id="6-1-mkdir-方法"><a href="#6-1-mkdir-方法" class="headerlink" title="6.1 mkdir()方法"></a>6.1 mkdir()方法</h4><p>可以使用os模块的<code>mkdir()</code>方法在当前目录下创建新的目录们。你需要提供一个包含了要创建的目录名称的参数。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.mkdir(<span class="string">"newdir"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>例子：</p>
-<p>下例将在当前目录下创建一个新目录test。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建目录test</span></span><br><span class="line">os.mkdir(<span class="string">"test"</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-2-chdir-方法"><a href="#6-2-chdir-方法" class="headerlink" title="6.2 chdir()方法"></a>6.2 chdir()方法</h4><p>可以用<code>chdir()</code>方法来改变当前的目录。<code>chdir()</code>方法需要的一个参数是你想设成当前目录的目录名称。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.chdir(<span class="string">"newdir"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>例子：</p>
-<p>下例将进入”/home/newdir”目录。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 将当前目录改为"/home/newdir"</span></span><br><span class="line">os.chdir(<span class="string">"/home/newdir"</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-3-getcwd-方法："><a href="#6-3-getcwd-方法：" class="headerlink" title="6.3 getcwd()方法："></a>6.3 getcwd()方法：</h4><p><code>getcwd()</code>方法显示当前的工作目录。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.getcwd()</span><br></pre></td></tr></table></figure>
-
-<p>例子：</p>
-<p>下例给出当前目录：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 给出当前的目录</span></span><br><span class="line"><span class="keyword">print</span> os.getcwd()</span><br></pre></td></tr></table></figure>
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
-<h4 id="6-4-rmdir-方法"><a href="#6-4-rmdir-方法" class="headerlink" title="6.4 rmdir()方法"></a>6.4 rmdir()方法</h4><p><code>rmdir()</code>方法删除目录，目录名称以参数传递。</p>
-<p>在删除这个目录之前，它的所有内容应该先被清除。</p>
-<p>语法：</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">os.rmdir(<span class="string">'dirname'</span>)</span><br></pre></td></tr></table></figure>
 
-<p>例子：</p>
-<p>以下是删除” /tmp/test”目录的例子。目录的完全合规的名称必须被给出，否则会在当前目录下搜索该目录。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除&amp;rdquo;/tmp/test&amp;rdquo;目录</span></span><br><span class="line">os.rmdir( <span class="string">"/tmp/test"</span>  )</span><br></pre></td></tr></table></figure>
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
 
-<h3 id="7-文件、目录其他相关的方法"><a href="#7-文件、目录其他相关的方法" class="headerlink" title="7. 文件、目录其他相关的方法"></a>7. 文件、目录其他相关的方法</h3><p>File 对象和 OS 对象提供了很多文件与目录的操作方法，可以通过点击下面链接查看详情：</p>
-<ul>
-<li><a href="/python/file-methods.html">File 对象方法</a>: file 对象提供了操作文件的一系列方法。</li>
-<li><a href="/python/os-file-methods.html" target="_blank" rel="noopener noreferrer">OS 对象方法</a>: 提供了处理文件及目录的一系列方法。</li>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>I/O</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python编码问题——utf-8和gbk</title>
-    <url>/2020/07/14/python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94utf-8%E5%92%8Cgbk/</url>
-    <content><![CDATA[<p>utf-8与gbk的区别：</p>
-<ul>
-<li><p>GBK是在国家标准GB2312基础上扩容后兼容GB2312的标准（好像还不是国家标准）。GBK编码专门用来解决中文编码的，是双字节的。不论中英文都是双字节的。GBK包含全部中文字符。</p>
-</li>
-<li><p><strong>utf-8</strong> 编码是用以解决国际上字符的一种多字节编码，它对英文使用8位（即一个字节），中文使用24位（三个字节）来编码。对于英文字符较多的论坛则用<strong>utf-8</strong>节省空间。另外，如果是外国人访问你的GBK网页，需要下载中文语言包支持。访问<strong>utf-8</strong>编码的网页则不出现这问题。可以直接访问。<strong>utf-8</strong>则包含全世界所有国家需要用到的字符。</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20190510180921437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ltRGVQYW5EYQ==,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><strong>unicode</strong>其实是一种在操作过程中存在的字符状态，一般来讲，例如python中的str都是以<strong>unicode</strong>编码，在进行操作时会具化成为<strong>utf-8</strong>与<strong>gbk</strong>，往往是前者居多。</p>
-<p>如上图所示，在python中不同编码的转换都要经过Unicode，不论是UTF-8或者是GBK，整个过程都是先通过编码decode转换为Unicode告诉Unicode当前的编码格式是什么、然后再通过解码encode转换为自己想要实现的编码格式或类型。</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">s = <span class="string">'你好'</span>  </span><br><span class="line"><span class="comment"># str类型，默认编码为unicode</span></span><br><span class="line">print(s.encode(<span class="string">"gbk"</span>)) </span><br><span class="line"><span class="comment"># Unicode转gbk</span></span><br><span class="line"><span class="comment"># 输出为：b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">s = s.encode(<span class="string">"gbk"</span>)</span><br><span class="line"><span class="comment"># 将gbk的s编码赋给s</span></span><br><span class="line">print(s)</span><br><span class="line"><span class="comment"># 显然输出为： b'\xc4\xe3\xba\xc3'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **4**</span></span><br><span class="line">print(s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)) </span><br><span class="line"> <span class="comment"># Unicode转utf-8</span></span><br><span class="line"><span class="comment">#输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line"><span class="comment">#在这条语句中，由于先前s已经变成了gbk编码，所以得先解码变成unicode，再进行编码，否则报错</span></span><br><span class="line">s = s.decode(<span class="string">'gbk'</span>).encode(<span class="string">"utf-8"</span>)</span><br><span class="line">print(s)</span><br><span class="line"><span class="comment">#显然输出为： b'\xe4\xbd\xa0\xe5\xa5\xbd'</span></span><br><span class="line">print(len(s))</span><br><span class="line"><span class="comment"># 输出长度为 **6**</span></span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python中的斜杠和反斜杠</title>
-    <url>/2020/07/15/python%E4%B8%AD%E7%9A%84%E6%96%9C%E6%9D%A0%E5%92%8C%E5%8F%8D%E6%96%9C%E6%9D%A0/</url>
-    <content><![CDATA[<p>首先，”/“左倾斜是正斜杠,”&quot;右倾斜是反斜杠,可以记为：除号是正斜杠一般来说对于目录分隔符，Unix和Web用正斜杠/，Windows用反斜杠，但是现在Windows</p>
-<h4 id="一、目录中的斜杠"><a href="#一、目录中的斜杠" class="headerlink" title="一、目录中的斜杠"></a>一、目录中的斜杠</h4><p>python读文件需要输入的目录参数，列出以下例子：</p>
-<p>path = r”C:\Windows\temp\readme.txt”</p>
-<p>path1 = r”c:\windows\temp\readme.txt”</p>
-<p>path2 = “c:\windows\temp\readme.txt”</p>
-<p>path3 = “c:/windows/temp/readme.txt”</p>
-<p>打开文件函数open()中的参数可以是path也可以是path1、path2、path3。</p>
-<p>path：”&quot;为字符串中的特殊字符，加上r后变为原始字符串，则不会对字符串中的”\t”、”\r”        进行字符串转义</p>
-<p>path1：大小写不影响windows定位到文件</p>
-<p>path2：用一个”&quot;取消第二个”&quot;的特殊转义作用，即为”\“</p>
-<p>*path3：用正斜杠做目录分隔符也可以转到对应目录，并且在python中path3的方式也省去了反斜杠\转义的烦恼</p>
-<h4 id="二、正则表达式中的斜杠"><a href="#二、正则表达式中的斜杠" class="headerlink" title="二、正则表达式中的斜杠"></a>二、正则表达式中的斜杠</h4><p>正则表达式匹配反斜杠”&quot;，为什么是”\\“或是 r”\“呢？</p>
-<p>因为在正则表达式中\为特殊符号，为了取消它在正则表达式中的特殊意义需要加一个\就变成了\，但是问题又来了，\也是字符串中的特殊字符，所以又要分别对两个\取消其特殊意义，即为\\。Python中有一个原始字符串操作符，用于那些字符串中出现特殊字符，在原始字符串中，没有转义字符和不能打印的字符。这样就可以取消了\在字符串中的转义功能，即r”\“。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Font-Awesome图标库</title>
-    <url>/2020/07/15/Font-Awesome%E5%9B%BE%E6%A0%87%E5%BA%93/</url>
-    <content><![CDATA[<p>这波啊，这波是把<a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">Font awesome</a>的图标整理一下（×）</p>
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/telescope_32px.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/telescope_16px.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+
+
+  <meta name="keywords" content="html," />
+
+
+
+
+
+  <link rel="alternate" href="http://www.zhihu.com/rss" title="Tom's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这波啊，这波是把Font awesome的图标整理一下（×） 清空收藏夹（√）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Font-Awesome图标库">
+<meta property="og:url" content="http://yoursite.com/2020/07/15/Font-Awesome%E5%9B%BE%E6%A0%87%E5%BA%93/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="这波啊，这波是把Font awesome的图标整理一下（×） 清空收藏夹（√）">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-15T12:20:37.000Z">
+<meta property="article:modified_time" content="2020-07-15T12:24:34.842Z">
+<meta property="article:author" content="Tom Forest">
+<meta property="article:tag" content="html">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/15/Font-Awesome图标库/"/>
+
+
+
+
+
+  <title>Font-Awesome图标库 | Tom's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/Flying-Tom" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="/images/avatar.jpg"
+               alt="Tom's Blog"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tom's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">A dreamer <i class="fa fa-wpexplorer" aria-hidden="true"></i> <br> Flying after light</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/Font-Awesome%E5%9B%BE%E6%A0%87%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tom Forest">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tom's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Font-Awesome图标库</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-15T20:20:37+08:00">
+                2020-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html/" itemprop="url" rel="index">
+                    <span itemprop="name">html</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这波啊，这波是把<a href="http://www.fontawesome.com.cn/" target="_blank" rel="noopener">Font awesome</a>的图标整理一下（×）</p>
 <p>清空收藏夹（√）</p>
 <a id="more"></a>
 
@@ -2772,12 +1468,805 @@
           </div>
         </section>
       </div>
-]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-      </tags>
-  </entry>
-</search>
+
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------That's all.<i class="fa fa-heart "></i>Thanks for your reading !-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/15/python%E4%B8%AD%E7%9A%84%E6%96%9C%E6%9D%A0%E5%92%8C%E5%8F%8D%E6%96%9C%E6%9D%A0/" rel="next" title="python中的斜杠和反斜杠">
+                <i class="fa fa-chevron-left"></i> python中的斜杠和反斜杠
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tom Forest</p>
+              <p class="site-description motion-element" itemprop="description">Who has seen the wind?<br>Neither I nor you.<br>But when the leaves hang trembling,<br>The wind is passing through.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="http://www.zhihu.com/rss" target="_blank" rel="alternate noopener">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Flying-Tom" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:849719156@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/users/13348272/tom-forest" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#web-application"><span class="nav-text">Web Application Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#accessibility"><span class="nav-text">Accessibility Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hand"><span class="nav-text">Hand Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transportation"><span class="nav-text">Transportation Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gender"><span class="nav-text">Gender Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#file-type"><span class="nav-text">File Type Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spinner"><span class="nav-text">Spinner Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#form-control"><span class="nav-text">Form Control Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#payment"><span class="nav-text">Payment Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chart"><span class="nav-text">Chart Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#currency"><span class="nav-text">Currency Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text-editor"><span class="nav-text">Text Editor Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#directional"><span class="nav-text">Directional Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#video-player"><span class="nav-text">Video Player Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brand"><span class="nav-text">Brand Icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medical"><span class="nav-text">Medical Icons</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-bullseye"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cao Yusen</span>
+
+  
+
+</div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Visitors:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://Github.com">Github</a></div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
